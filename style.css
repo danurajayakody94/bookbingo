@@ -1000,6 +1000,53 @@ div.txt {
     font-size: 15px;
 }
 
+.cmplt-tsk{
+    top: 50px;
+}
+
+.cmplt-tsk .trending_list_desc{
+    line-height: 40px;
+    width: 38%;
+    margin-left: 7%;
+}
+
+.status-bdge{
+    padding: 10px 0;
+}
+
+.status-bdge .cmplt{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 300;
+    text-shadow: none;
+    background: green;
+    padding: 7px 40px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.status-bdge .pndng {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 300;
+    text-shadow: none;
+    background: #d66a17;
+    padding: 7px 17px;
+    border-radius: 12px;
+    color: #fff;
+    -webkit-box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.25);
+    box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.25);
+}
+
+.cmplt-tsk iframe{
+    width: 375px;
+    height: 565px !important;
+}
+
+.aftr-gm{
+    top: 85px;
+}
+
 /*
 ****
 ********
