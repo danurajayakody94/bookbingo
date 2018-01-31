@@ -330,6 +330,11 @@ div.element {
     background: #005499 !important;
     border: 1px solid #fff !important;
 }
+
+.book_bingo_foter{
+    z-index: 999999999999;
+}
+
 /*Trending page Styles*/
 
 .trending_body{
@@ -450,6 +455,67 @@ div.element {
 
 .menu_current {
     background: #059 !important;
+}
+
+.side-nav-custom #profile_image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 33%;
+}
+
+.profbg-img{
+    background: url(images/prof-bg.png) !important;
+    background-repeat: no-repeat;
+    background-size: 272px 200px !important;
+    padding-top: 1em;
+}
+
+.side-nav-custom #profile_image h2{
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 12px;
+    text-shadow: none;
+    color: #000;
+}
+
+.side-nav-custom #profile_image p{
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-size: 14px;
+    text-shadow: none;
+    color: #000;
+}
+
+.side-nav-custom .main-nav-opt-list{
+    background: #00aeef !important;
+}
+
+.side-nav-custom .ui-panel-inner{
+    padding: 0 0 1em 0 !important;
+}
+
+.main-nav-opt-list ul li:nth-child(odd) a{
+    background: none !important;
+    border:none;
+    text-shadow: none !important;
+    color: #000 !important;
+    padding: 15px 15px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-nav-opt-list ul li:nth-child(even) a{
+    background: #6ad6ff !important;
+    border:none;
+    text-shadow: none !important;
+    color: #000 !important;
+    padding: 15px 15px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 /*
@@ -592,7 +658,7 @@ div.txt {
 
 .map ul li.to-cmplt::after {
     height: 100%;
-    content: "Compleat the current task to unlock";
+    content: "Level locked";
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
@@ -609,6 +675,43 @@ div.txt {
 .map-page-map{
     height: 80%;
 }
+
+.book-detail-book-hdr img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 30%;
+}
+
+.mob-menu a{
+    width:100%;
+}
+
+.side-nav-custom{
+    position: absolute;
+    top: 64px;
+    padding-bottom: 100px;
+    float: left;
+}
+
+.dark-over-lay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 500px;
+    bottom: 0;
+    background-color: #000000a3;
+    z-index: -99;
+}
+
+.ui-panel-closed .dark-over-lay{
+    -webkit-transition-duration: 1ms !important;
+    -moz-transition: -moz-transform 1ms ease !important;
+    transition: transform 1ms ease !important;
+}
+
+
 /*
 ****
 ********

@@ -28,34 +28,6 @@
    <body>
 
       <div data-role = "page" id = "pageone">
-        <div data-role="panel" data-display="overlay" id="mypanel">
-                  <!-- panel content goes here -->
-                  <div id="profile_image">
-                    <img alt="" src="images/profile_pic.jpg" style="width: 200px; height: 200px; border-radius: 50%">
-                  </div>
-                  <div class="sliderList">
-
-                    <ul data-role="listview">
-                        <li><a href="#">Leaderboard</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Scan the Code</a></li>
-                        <li><a href="#">Complete Tasks</a></li>
-                        <li><a href="contract.html">Contract Us</a></li>
-                        <li><a href="login.html">Sign Out</a></li>
-                    </ul>
-                  </div>
-              </div><!-- /panel -->
-
-
-              <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="#">About</a>
-                  <a href="#">Services</a>
-                  <a href="#">Clients</a>
-                  <a href="#">Contact</a>
-                </div>
-
 
          <div data-role = "header" data-theme="b">
 
@@ -123,13 +95,43 @@
 
                 </div>
 
+             <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+
+                 <!-- panel content goes here -->
+                 <div id="profile_image" class="profbg-img">
+                     <img alt="" src="images/profile_pic.jpg">
+                     <h2>Palitha Perera</h2>
+                     <p>palitha@revportx.com</p>
+                 </div>
+                 <div class="sliderList main-nav-opt-list">
+                     <ul data-role="listview">
+                         <li><a href="#">Leaderboard</a></li>
+                         <li><a href="#">Profile</a></li>
+                         <li><a href="#">About Us</a></li>
+                         <li><a href="#">Scan the Code</a></li>
+                         <li><a href="#">Complete Tasks</a></li>
+                         <li><a href="contract.html">Contract Us</a></li>
+                         <li><a href="login.html">Sign Out</a></li>
+                     </ul>
+                 </div>
+
+                 <div class="dark-over-lay">&nbsp;</div>
+
+             </div><!-- /panel -->
+
+
+             <div id="mySidenav" class="sidenav">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <a href="#">About</a>
+                 <a href="#">Services</a>
+                 <a href="#">Clients</a>
+                 <a href="#">Contact</a>
+             </div>
 
          </div>
 
 
-
           <div data-role = "main" class = "ui-content trending_body">
-
 
               <div class="listCont trending_list">
 
