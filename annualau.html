@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+       <link rel = "stylesheet" href = "style.css">
+       <script>
+        $( "#mypanel" ).trigger( "updatelayout" );
+
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+       </script>
+
+   </head>
+
+
+
+
+   <body>
+
+      <div data-role = "page" id = "pageone">
+
+
+              <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+
+
+         <div data-role = "header" data-theme="b">
+
+             <div class="book_bingo_header_top">
+                 <div class="mob-menu">
+                   <a href="events.html">
+                   <img src="images/back.png">
+                 </a>
+                 </div>
+
+                 <h1><img src="images/icon.png">Annual Author Festival</h1>
+                 <div class="mob-setting">
+                   <span onclick="openNav()">
+                     <img src="images/more.png">
+                     </span>
+                 </div>
+             </div>
+
+             <div class="book_bingo_search detl-pg-hdr">
+                 <img src="images/22.jpg">
+                     <p class="hdr">Annual Author Festival</p>
+                     <p class="dtls"> Town Hall Colombo </p>
+             </div>
+           </div>
+
+           <div class="detl-pg-bdy">
+                           <p><br>
+                               It is held in annualy mid February at the Town Hall in Colombo,
+                               Sri Lanka. This annual author festival is oraganizd by the Sri Lankan Author's Association.
+                           </p>
+                       <ul>
+                         <li>
+                             <img src="images/clndr.png">
+                             <p>11th February 2018</p>
+                         </li>
+                         <li>
+                             <img src="images/time.png">
+                             <p>10.30 am - 01.00 pm</p>
+                         </li>
+                         <li>
+                             <img src="images/lctn.png">
+                             <p>Town Hall Colombo</p>
+                         </li>
+                       </ul>
+           </div>
+
+
+
+          <div data-role = "footer" class="book_bingo_foter">
+              <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                  <ul>
+                      <li>
+                          <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
+                              <img src="images/trending.png">
+                              <p>Trending</p>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                              <img src="images/home.png">
+                              <p>Home</p>
+                          </a>
+                      </li>
+                      <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                          <img src="images/map.png">
+                          <p>Map</p>
+                      </a></li>
+                      <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item menu_current">
+                          <img src="images/events.png">
+                          <p>Events</p>
+                      </a></li>
+                  </ul>
+              </div><!-- /navbar -->
+          </div>
+      </div>
+   </body>
+</html>
