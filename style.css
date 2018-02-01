@@ -1000,6 +1000,14 @@ div.txt {
     font-size: 15px;
 }
 
+.ldr-brd .trending_list_desc1{
+    width: 47%;
+    margin-left: 5%;
+    line-height: 40px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
 .cmplt-tsk{
     top: 50px;
 }
