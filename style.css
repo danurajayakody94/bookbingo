@@ -406,7 +406,7 @@ hr {
 }
 
 .trending_list_desc {
-    width: 50%;
+    width: 41%;
     float: left;
     margin-left: 2%;
 }
@@ -430,7 +430,7 @@ hr {
 }
 
 .favClass {
-    width: 17%;
+    width: 15%;
     float: left;
     margin: 8px 0;
 }
@@ -656,7 +656,7 @@ div.txt {
 }
 
 .map .trending_list_desc {
-    width: 54%;
+    width: 44%;
     float: left;
     margin-left: 4%;
     margin-top: 7px;
@@ -1176,6 +1176,21 @@ div.txt {
     top: 167px;
 }
 
+.cal-arrrow.trndngarr {
+    width: 12%;
+    float: left;
+    margin-top: 15px;
+}
+
+.newspg .trending_list_desc {
+    width: 47%;
+}
+
+.newspg .favClass {
+    width: 20%;
+}
+
+
 /*
 ****
 ********
@@ -1265,7 +1280,7 @@ and (orientation: landscape) {
     }
 
     .map .trending_list_desc {
-        width: 52%;
+        width: 43%;
         font-size: 17px;
     }
 
@@ -1398,5 +1413,37 @@ and (orientation: landscape) {
         width: 33%;
         height: auto;
     }
+
+    .trendng .trending_list_desc {
+        width: 48%;
+    }
+
+    .cal-arrrow.trndngarr {
+        width: 8%;
+        margin-left: 5%;
+        float: left;
+        margin-top: 13px;
+    }
+
+    .homepg .cal-arrrow.trndngarr {
+        margin-left: 12%;
+    }
+
+    .mappg .cal-arrrow.trndngarr {
+        width: 12%;
+        margin-left: 0;
+    }
+
+    .newspg .news-arr {
+        width: 11%;
+        padding-left: 13%;
+        margin-top: 14px;
+    }
+
+    .cmplttskpg .status-bdge {
+        margin-left: 20%;
+        float: left;
+    }
+
 
 }
