@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
 
-   <head>
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-       <link rel = "stylesheet" href = "style.css">
-       <script>
+<head>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+    <script>
         $( "#mypanel" ).trigger( "updatelayout" );
 
         function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("mySidenav").style.width = "250px";
         }
 
         function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("mySidenav").style.width = "0";
         }
 
-       </script>
+    </script>
 
-   </head>
-
-
+</head>
 
 
-   <body>
 
-      <div data-role = "page" id = "pageone">
-        <div class="book_bingo_hdr" data-role="header" data-theme="b">
-            <div class="book_bingo_header_top">
-                <div class="mob-menu">
-                  <a href="#mypanel">
-                  <img src="images/menu.png">
-                  </a>
-                </div>
 
-                <h1><img src="images/icon.png">Contract Us</h1>
-                <div class="mob-setting">
-                  <span onclick="openNav()">
-                    <img src="images/more.png">
-                    </span>
-                </div>
+<body>
+
+<div data-role = "page" id = "pageone">
+
+    <div data-role = "header" data-theme="b">
+
+        <div class="book_bingo_header_top">
+            <div class="mob-menu">
+                <a href="#mypanel">
+                    <img src="images/menu.png">
+                </a>
             </div>
 
+            <h1><img src="images/icon.png">Contact Us</h1>
+            <div class="mob-setting">
+                   <span onclick="openNav()">
+                     <img src="images/more.png">
+                     </span>
+            </div>
         </div>
 
         <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
@@ -70,6 +70,7 @@
 
         </div><!-- /panel -->
 
+
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#" style="padding-top: 40px !important;">About Us</a>
@@ -78,58 +79,59 @@
             <a href="login.html">Sign Out</a>
         </div>
 
-<br><br><br><br><br><br>
-           <div class="container">
-             <form action="a.php">
-
-               <label for="fname">First Name</label>
-               <input type="text" id="fname" name="fname" placeholder="Your name..">
-
-               <label for="lname">Last Name</label>
-               <input type="text" id="lname" name="lname" placeholder="Your last name..">
-
-               <label for="email">Email</label>
-               <input type="text" id="email" name="email" placeholder="Your email..">
-
-               <label for="pnum">Phone Number</label>
-               <input type="text" id="pnum" name="pnum" placeholder="Your phone number..">
-
-               <label for="subject">Message</label>
-               <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-               <input type="submit" value="Submit">
-
-             </form>
-           </div>
+    </div>
 
 
+    <div data-role = "main" class = "ui-content contct-bdy">
 
-          <div data-role = "footer" class="book_bingo_foter">
-              <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
-                  <ul>
-                      <li>
-                          <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
-                              <img src="images/trending.png">
-                              <p>Trending</p>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="home.html" data-icon="homeIcon" class="bottom_menu_item menu_current">
-                              <img src="images/home.png">
-                              <p>Home</p>
-                          </a>
-                      </li>
-                      <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
-                          <img src="images/map.png">
-                          <p>Map</p>
-                      </a></li>
-                      <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
-                          <img src="images/events.png">
-                          <p>Events</p>
-                      </a></li>
-                  </ul>
-              </div><!-- /navbar -->
-          </div>
-      </div>
-   </body>
+        <div class="listCont trending_list">
+            <form action="a.php" class="cntctus-frm">
+
+                <input type="text" id="fname" name="fname" placeholder="First Name">
+
+                <input type="text" id="lname" name="lname" placeholder="Last Name">
+
+                <input type="email" id="email" name="email" placeholder="Email">
+
+                <input type="text" id="pnum" name="pnum" placeholder="Phone Number">
+
+                <textarea id="subject" name="subject" placeholder="Message" style="height: 100px !important;"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div data-role = "footer" class="book_bingo_foter">
+        <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+            <ul>
+                <li>
+                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
+                        <img src="images/trending.png">
+                        <p>Trending</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                        <img src="images/home.png">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                    <img src="images/map.png">
+                    <p>Map</p>
+                </a></li>
+                <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                    <img src="images/events.png">
+                    <p>Events</p>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+</div>
+</body>
 </html>

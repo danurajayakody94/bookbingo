@@ -1055,6 +1055,27 @@ div.txt {
     top: 85px;
 }
 
+.bk-dtl-mobile{
+    display: none;
+}
+
+.contct-bdy{
+    padding: 10px 2%;
+    top: 63px;
+    position: absolute;
+    width: 96%;;
+}
+
+.contct-bdy .cntctus-frm div{
+    margin:20px 0;
+}
+
+.contct-bdy .cntctus-frm div input{
+    border-radius: 0px !important;
+    padding: 10px;
+}
+
+
 /*
 ****
 ********
@@ -1158,6 +1179,88 @@ and (orientation: landscape) {
     .map ul li.ui-first-child::after, .map ul li.to-cmplt::after {
         line-height: 66px;
         font-size: 15px;
+        padding-top: 8px;
+    }
+
+    .bookdtl .detl-pg-hdr .hdr, .bookdtl .detl-pg-hdr .dtls{
+        width: 40%;
+        text-align: left;
+        float: left;
+        margin-left: 10px;
+        padding-top: 8px;
+    }
+
+    .bookdtl .detl-pg-hdr img{
+        padding: 10px 20px;
+        float: left;
+    }
+
+    .bookdtl .detl-pg-hdr{
+        margin: 5px 3%;
+    }
+
+    .bookdtl .detl-pg-bdy.prfl-dtl {
+        top: 200px!important;
+    }
+
+    .bookdtl .bk-dtl-web{
+        display: none;
+    }
+
+    .bookdtl .bk-dtl-mobile{
+        display: block;
+    }
+
+    .bookdtl .detl-pg-hdr{
+        width: 60%;
+        float: left;
+    }
+
+    .bookdtl .bk-dtl-mobile{
+        width: 15%;
+        float: left;
+        height: 100px;
+    }
+
+    .bookdtl .pie-wrapper .label {
+        font-size: 15px;
+        left: 7.3em;
+        top: 1.9em;
+        width: 55%;
+        color: #fff !important;
+        text-shadow: none;
+    }
+
+
+    .event-dtl-pg .detl-pg-hdr img{
+        padding: 0 3%;
+        float: left;
+        width: 75px;
+        height: 75px;
+    }
+
+    .event-dtl-pg .detl-pg-hdr p{
+        width:76%;
+        float: left;
+        text-align: left;
+        margin-left: 15px;
+        margin-top: 5px !important;
+    }
+
+    .event-dtl-pg .detl-pg-bdy{
+        top: 185px;
+    }
+
+    .detl-pg-bdy .bk-fr-no-mrgn{
+        margin-top: 0px !important;
+    }
+
+    .cmplttsk-desc h2{
+        line-height: 20px;
+    }
+
+    .status-bdge{
+        padding: 3px 0;
     }
 
 }
