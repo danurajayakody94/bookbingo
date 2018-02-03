@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+    <script>
+        $( "#mypanel" ).trigger( "updatelayout" );
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+</head>
+
+
+
+
+<body>
+
+<div data-role = "page" id = "pageone">
+
+    <div data-role = "header" data-theme="b">
+
+        <div class="book_bingo_header_top">
+            <div class="mob-menu">
+                <a href="#mypanel">
+                    <img src="images/menu.png">
+                </a>
+            </div>
+
+            <h1><img src="images/icon.png">Book Categories</h1>
+            <div class="mob-setting">
+                   <span onclick="openNav()">
+                     <img src="images/more.png">
+                     </span>
+            </div>
+        </div>
+
+        <div id="list" class="hdr_crsl">
+            <div class="wrapper">
+                <div class="element" style="margin-left: 5px;">
+                    <a href="bookCatagryFairy.html">
+                        <img src="images/fry.png">
+                    </a>
+                </div>
+                <div class="element">
+                    <a href="bookCatagryScience.html">
+                        <img src="images/scns.png">
+                    </a>
+                </div>
+                <div class="element">
+                    <a href="bookCatagryHstry.html">
+                        <img src="images/hstry.png">
+                    </a>
+                </div>
+                <div class="element home-catgry-crnt">
+                    <a href="bookCatagryChlrn.html">
+                        <img src="images/fry.png">
+                    </a>
+                </div>
+                <div class="element">
+                    <img src="images/fry.png">
+                </div>
+                <div class="element">
+                    <img src="images/fry.png">
+                </div>
+                <div class="element">
+                    <img src="images/fry.png">
+                </div>
+                <div class="element">
+                    <img src="images/fry.png">
+                </div>
+                <div class="element">
+                    <img src="images/fry.png">
+                </div>
+                <div class="element">
+                    <img src="images/fry.png">
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="txt" style="margin-left: 5px;">Fairy</div>
+                <div class="txt">Science</div>
+                <div class="txt">History</div>
+                <div class="txt">Children</div>
+                <div class="txt">Romantic</div>
+                <div class="txt">Horror</div>
+                <div class="txt">Fantasy</div>
+                <div class="txt">Comics</div>
+                <div class="txt">Fairytale</div>
+                <div class="txt">Classic</div>
+            </div>
+
+        </div>
+
+        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+
+            <!-- panel content goes here -->
+            <div id="profile_image" class="profbg-img">
+                <img alt="" src="images/profile_pic.jpg">
+                <h2>Sachith Perera</h2>
+                <p>sachith.perera@revport.net</p>
+            </div>
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="leaderboard.html">Search Books</a></li>
+                    <li><a href="#">Leader Board</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">My Favourites</a></li>
+                    <li><a href="completetasks.html">Complete Tasks</a></li>
+                    <li><a href="contact.html">My Profile</a></li>
+                    <li><a href="login.html">More Games</a></li>
+                </ul>
+            </div>
+
+            <div class="dark-over-lay">&nbsp;</div>
+
+        </div><!-- /panel -->
+
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" style="padding-top: 40px !important;">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="login.html">Sign Out</a>
+        </div>
+
+    </div>
+
+
+    <div data-role = "main" class = "ui-content trending_body">
+
+        <div class="listCont trending_list">
+            <div class="cat-row">
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c1.png">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c2.jpg">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c3.jpg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c1.png">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c2.jpg">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c3.jpg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c1.png">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c2.jpg">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c3.jpg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c1.png">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c2.jpg">
+                    </a>
+                </div>
+
+                <div class="cat-itm">
+                    <a href="">
+                        <img src="images/c3.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div data-role = "footer" class="book_bingo_foter">
+        <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+            <ul>
+                <li>
+                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
+                        <img src="images/trending.png">
+                        <p>Trending</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                        <img src="images/home.png">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                    <img src="images/map.png">
+                    <p>Map</p>
+                </a></li>
+                <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                    <img src="images/events.png">
+                    <p>Events</p>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+</div>
+</body>
+</html>

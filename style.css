@@ -157,7 +157,7 @@ hr {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #00aeef;
+    background-color: #005499;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -170,7 +170,7 @@ hr {
     text-decoration: none;
     text-shadow: none;
     font-size: 18px;
-    color: #000 !important;
+    color: #fff !important;
     text-align: center;
     padding: 10px 0 !important;
     display: block;
@@ -1075,6 +1075,26 @@ div.txt {
     padding: 10px;
 }
 
+.cat-row{
+    width:100%;
+    float: left;
+}
+
+.cat-itm{
+    width: 32.5%;
+    float: left;
+    margin: 0px;
+    height: 150px;
+    border: 1px solid #fff;
+}
+
+.retrndng{
+    max-height: 600px;
+}
+
+.rebdytrndng{
+    top: 50px;
+}
 
 /*
 ****
@@ -1113,6 +1133,15 @@ and (orientation: landscape) {
         width: 30px !important;
         height: 30px !important;
         margin: 5px 23px 5px 0;
+    }
+
+    .hdr_crsl .wrapper a{
+        text-shadow: none !important;
+        display: inline-block;
+    }
+
+    .ui-bar-b{
+        text-shadow: none !important;
     }
 
     div.txt {
