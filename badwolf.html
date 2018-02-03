@@ -9,15 +9,7 @@
        <link rel = "stylesheet" href = "style.css">
        <script>
         $( "#mypanel" ).trigger( "updatelayout" );
-
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-
+        $( "#mypanel1" ).trigger( "updatelayout" );
        </script>
 
    </head>
@@ -30,12 +22,16 @@
       <div data-role = "page" id = "pageone" class="event-dtl-pg">
 
 
-          <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="about.html" style="padding-top: 40px !important;">About Us</a>
-              <a href="contact.html">Contact Us</a>
-              <a href="login.html">Sign Out</a>
-          </div>
+        <div data-role="panel" id="mypanel1" data-position="right" data-display="overlay" class="side-nav-custom">
+            <!-- panel content goes here -->
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Sign Out</a></li>
+                  </ul>
+            </div>
+        </div><!-- /panel -->
 
 
          <div data-role = "header" data-theme="b">
@@ -49,9 +45,9 @@
 
                  <h1><img src="images/icon.png">Big Bad Wolf</h1>
                  <div class="mob-setting">
-                   <span onclick="openNav()">
-                     <img src="images/more.png">
-                     </span>
+                   <a href="#mypanel1">
+                    <img src="images/more.png">
+                   </a>
                  </div>
              </div>
 
