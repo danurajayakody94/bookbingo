@@ -9,6 +9,17 @@
     <script>
      $( "#mypanel" ).trigger( "updatelayout" );
      $( "#mypanel1" ).trigger( "updatelayout" );
+
+     $(document).ready(function(){
+       $("#search").on("keyup", function() {
+         var value = $(this).val().toLowerCase();
+         $("#filter *").filter(function() {
+           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+         });
+       });
+     });
+
+
     </script>
 
 </head>
@@ -95,18 +106,22 @@
 
 
         <div class="book_bingo_search">
-            <input type="search" placeholder="Search" name="search-mini" id="search-mini" value="" data-mini="true" />
-        </div>
+          <form class="ui-filterable">
+   <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value="" data-type="search" data-mini="true" />
+</form>
+<!-- end -->
+
+            </div>
 
     </div>
 
 
-    <div data-role = "main" class = "ui-content trending_body">
+    <div data-role = "main" class = "ui-content trending_body" id="filter">
 
 
         <div class="listCont trending_list ldr-brd">
 
-            <ul data-role="listview" data-inset="true" id = "test">
+            <ul data-role="listview" data-inset="true" id = "test" data-filter="true" data-input="#filterBasic-input">
                 <li id="item1"><a href="#">
 
                     <div class="trending_list_img">

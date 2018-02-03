@@ -8,7 +8,25 @@
        <link rel = "stylesheet" href = "style.css">
        <script>
         $( "#mypanel" ).trigger( "updatelayout" );
-        $( "#mypanel1" ).trigger( "updatelayout" );
+
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        $(document).ready(function(){
+          $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#filter *").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+
+
        </script>
 
    </head>
@@ -16,7 +34,7 @@
 
 
    <body>
-   <div data-role="page" id="pageone" class="trendng">
+      <div data-role = "page" id = "pageone">
 
 	 <!--S <script type="text/javascript">
         //item 1
@@ -50,9 +68,9 @@
 
 	               <h1><img src="images/icon.png">Trendings</h1>
 	               <div class="mob-setting">
-                   <a href="#mypanel1">
-                    <img src="images/more.png">
-                   </a>
+                   <span onclick="openNav()">
+                     <img src="images/more.png">
+                     </span>
                    </div>
              </div>
 
@@ -66,13 +84,13 @@
                  </div>
                  <div class="sliderList main-nav-opt-list">
                      <ul data-role="listview">
-                         <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
-                         <li><a href="leaderboard.html">Leader Board</a></li>
-                         <li><a href="news.html">News</a></li>
-                         <li><a href="myfav.html">My Favourites</a></li>
+                         <li><a href="leaderboard.html">Leaderboard</a></li>
+                         <li><a href="#">Profile</a></li>
+                         <li><a href="#">About Us</a></li>
+                         <li><a href="#">Scan the Code</a></li>
                          <li><a href="completetasks.html">Complete Tasks</a></li>
-                         <li><a href="profile.html">My Profile</a></li>
-                         <li><a href="moregames.html">More Games</a></li>
+                         <li><a href="contract.html">Contract Us</a></li>
+                         <li><a href="login.html">Sign Out</a></li>
                      </ul>
                  </div>
 
@@ -80,27 +98,34 @@
 
              </div><!-- /panel -->
 
+             <div id="mySidenav" class="sidenav">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <a href="#" style="padding-top: 40px !important;">About Us</a>
+                 <a href="#">Settings</a>
+                 <a href="contract.html">Contact Us</a>
+                 <a href="login.html">Sign Out</a>
+             </div>
 
-             <div data-role="panel" id="mypanel1" data-position="right" data-display="overlay" class="side-nav-custom">
-                 <!-- panel content goes here -->
-                 <div class="sliderList main-nav-opt-list">
-                     <ul data-role="listview">
-                         <li><a href="about.html">About Us</a></li>
-                         <li><a href="contact.html">Contact Us</a></li>
-                         <li><a href="login.html">Sign Out</a></li>
-                       </ul>
-                 </div>
-             </div><!-- /panel -->
+<!-- Search/Filter code -->
+         <div class="book_bingo_search">
+           <form class="ui-filterable">
+    <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value="" data-type="search" data-mini="true" />
+</form>
+<!-- end -->
+
+             </div>
 
           </div>
 
 
-         <div data-role = "main" class = "ui-content trending_body rebdytrndng">
+         <div data-role = "main" class = "ui-content trending_body">
 
 
-             <div class="listCont trending_list retrndng">
+             <div class="listCont trending_list" id="filter">
 
-                <ul data-role="listview" data-inset="true" id = "test">
+<!-- also SEARCH -->
+                <ul data-role="listview" data-inset="true" id = "test" data-filter="true" data-input="#filterBasic-input">
+
                     <li id="item1"><a href="home.html">
 
                         <div class="trending_list_img">
@@ -108,8 +133,8 @@
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>Harry Potter</h2>
-                            <p>J. K. Rowling</p>
+                            <h2>Larry Potte111r</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place">
@@ -120,20 +145,16 @@
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                        </div>
-
                     </a></li>
                     <li id="item2"><a href="#">
 
                         <div class="trending_list_img">
-                            <img src="images/ffe.jpg">
+                            <img src="images/harrypotter.jpg">
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>Twilight</h2>
-                            <p>Stephenie Meyer</p>
+                            <h2>Harry Potter</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place">
@@ -144,20 +165,16 @@
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                        </div>
-
                     </a></li>
                     <li id="item3"><a href="#">
 
                         <div class="trending_list_img">
-                            <img src="images/bbb.jpg">
+                            <img src="images/harrypotter.jpg">
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>Lord of the Rings</h2>
-                            <p>J. R. R Tolkien</p>
+                            <h2>Harry Potter</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place"></div>
@@ -170,86 +187,70 @@
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                        </div>
-
                     </a></li>
                     <li id="item4"><a href="#">
 
                         <div class="trending_list_img">
-                            <img src="images/grd.jpg">
+                            <img src="images/harrypotter.jpg">
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>Jane Eyre</h2>
-                            <p>Charlotte Bronte</p>
+                            <h2>Harry Potter</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place">&nbsp;</div>
 
                         <div class = "favClass">
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                        </div>
-
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
                         </div>
 
                     </a></li>
                     <li id="item5"><a href="#">
 
                         <div class="trending_list_img">
-                            <img src="images/1111.jpg">
+                            <img src="images/harrypotter.jpg">
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>Peter Pan</h2>
-                            <p>Charlotte Bronte</p>
+                            <h2>Harry Potter</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place">&nbsp;</div>
 
                         <div class = "favClass">
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                        </div>
-
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
                         </div>
 
                     </a></li>
                     <li id="item6"><a href="#">
 
                         <div class="trending_list_img">
-                            <img src="images/gg.jpg">
+                            <img src="images/harrypotter.jpg">
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>Gulliver's Travels</h2>
-                            <p>Jonathan Swift</p>
+                            <h2>Harry Potter</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place">&nbsp;</div>
 
                         <div class = "favClass">
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                        </div>
-
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
                         </div>
 
                     </a></li>
                     <li id="item7"><a href="#">
 
                         <div class="trending_list_img">
-                            <img src="images/bs.jpg">
+                            <img src="images/harrypotter.jpg">
                         </div>
 
                         <div class="trending_list_desc">
-                            <h2>The Outsiders</h2>
-                            <p>S. E Hinton</p>
+                            <h2>Harry Potter</h2>
+                            <p>Apple released iOS 6.1</p>
                         </div>
 
                         <div class="trending_place">&nbsp;</div>
@@ -258,11 +259,8 @@
                             <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
-                        <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                        </div>
-
                     </a></li>
+
                 </ul>
           </div>
 
