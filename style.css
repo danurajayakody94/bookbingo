@@ -1710,6 +1710,33 @@ and (-webkit-min-device-pixel-ratio: 1) {
         min-height: auto;
         height: 470px;
     }
+
+    .event-tab-vw {
+        float: left;
+        width: 100%;
+        max-height: 2000px;
+        height: 825px;
+    }
+
+    .tab-evnt-cal {
+        background-color: #00aeef !important;
+        border: none;
+        color: #fff !important;
+        height: 40px;
+        width: 94%;
+        float: left;
+        margin: 20px 3%;
+    }
+
+    .tab-evnt-cal p {
+        width: 86%;
+        margin: 6px 0;
+        font-size: 22px;
+    }
+
+    .tab-evnt-cal a img {
+        width: 7%;
+    }
 }
 
 /* Landscape */
@@ -1785,6 +1812,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .map-lst-hight {
         min-height: auto;
         height: 241px;
+    }
+
+    .event-tab-vw {
+        height: 550px;
     }
 
 }

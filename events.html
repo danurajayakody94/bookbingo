@@ -20,7 +20,7 @@
              <div class="book_bingo_header_top">
                  <div class="mob-menu">
                    <a href="#mypanel">
-                   <img src="images/menu.png">
+                       <img class="mob-sidenav" src="images/menu.png">
                    </a>
                  </div>
 
@@ -32,7 +32,7 @@
                  </div>
              </div>
 
-             <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+             <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom mob-sidenav">
 
                  <!-- panel content goes here -->
                  <div id="profile_image" class="profbg-img">
@@ -69,17 +69,50 @@
              </div><!-- /panel -->
 
 
-             <div class="book_bingo_search event-cal">
+             <div class="book_bingo_search event-cal mob-sidenav">
                  <a href="eventsjan.html"><img class="img-left" src="images/left.png"></a>
                  <p>February</p>
                  <a href="eventsmarch.html"><img src="images/right.png"></a>
              </div>
          </div>
 
+
           <div data-role = "main" class = "ui-content trending_body trending_body_top">
 
+              <div class="side-nav-custom tab-side-nav">
 
-              <div class="listCont trending_list event_date_list">
+                  <!-- panel content goes here -->
+                  <div id="profile_imagetab" class="profbg-img">
+                      <img alt="" src="images/profile_pic.jpg" class="tab-img">
+                      <h2>Sachith Perera</h2>
+                      <p>sachith.perera@revport.net</p>
+                  </div>
+                  <div class="sliderList main-nav-opt-list">
+                      <ul data-role="listview">
+                          <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
+                          <li><a href="leaderboard.html">Leader Board</a></li>
+                          <li><a href="news.html">News</a></li>
+                          <li><a href="myfav.html">My Favourites</a></li>
+                          <li><a href="completetasks.html">Complete Tasks</a></li>
+                          <li><a href="profile.html">My Profile</a></li>
+                          <li><a href="moregames.html">More Games</a></li>
+                      </ul>
+                  </div>
+              </div><!-- /panel -->
+
+              <div class="tab_body fith-fltrs">
+
+                  <div class="tab-side-nav tab-srchbx">
+                      <div class="book_bingo_search event-cal tab-evnt-cal">
+                          <a href="eventsjan.html"><img class="img-left" src="images/left.png"></a>
+                          <p>February</p>
+                          <a href="eventsmarch.html"><img src="images/right.png"></a>
+                      </div>
+                      <!-- end -->
+
+                  </div>
+
+                  <div class="listCont trending_list event_date_list event-tab-vw">
 
                   <ul data-role="listview" data-inset="true" id = "test">
                       <li id="item1"><a href="#">
@@ -499,11 +532,41 @@
                       </a></li>
                   </ul>
               </div>
+
+                  <div data-role="footer" class="book_bingo_foter tab-footr">
+                      <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                          <ul>
+                              <li>
+                                  <a href="trendings.html" data-icon="trendingIcon"
+                                     class="bottom_menu_item">
+                                      <img src="images/trending.png">
+                                      <p>Trending</p>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                                      <img src="images/home.png">
+                                      <p>Home</p>
+                                  </a>
+                              </li>
+                              <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                                  <img src="images/map.png">
+                                  <p>Map</p>
+                              </a></li>
+                              <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item menu_current">
+                                  <img src="images/events.png">
+                                  <p>Events</p>
+                              </a></li>
+                          </ul>
+                      </div><!-- /navbar -->
+                  </div>
+
+              </div>
           </div>
 
           <div data-role = "footer" class="book_bingo_foter">
               <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
-                  <ul>
+                  <ul class="mob-footr">
                       <li>
                           <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
                               <img src="images/trending.png">
