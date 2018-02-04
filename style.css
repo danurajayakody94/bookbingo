@@ -1208,6 +1208,7 @@ div.txt {
     width: 30%;
     padding: 10px 35%;
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .main-lgo {
@@ -1216,7 +1217,7 @@ div.txt {
 }
 
 .login-bdy {
-    top: 200px;
+    top: 0px;
 }
 
 .login-bdy h1, .login-bdy p {
