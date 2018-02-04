@@ -5,10 +5,37 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="instascan.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script>
         $( "#mypanel" ).trigger( "updatelayout" );
         $( "#mypanel1" ).trigger( "updatelayout" );
+
+        function showQR(preview){
+
+          let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+        scanner.addListener('scan', function (content) {
+        console.log(content);
+        if(content!=null){
+          // push to specific page
+          window.location.replace("trendings.html");
+        }
+        });
+        Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+        }).catch(function (e) {
+        console.error(e);
+        });
+
+
+        }
+
+
+
         $(document).ready(function(){
           $("#search").on("keyup", function() {
             var value = $(this).val().toLowerCase();
