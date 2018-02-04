@@ -10,7 +10,7 @@
         $( "#mypanel" ).trigger( "updatelayout" );
         $( "#mypanel1" ).trigger( "updatelayout" );
 
-         function openOnImageClick(){
+         function hpClick(){
 
             
             //document.getElementById("h1").src="images/heart-icon.png";
@@ -19,11 +19,16 @@
             if(filename == "white-heart-icon.png"){
                // alert("white");
                 document.getElementById("h1").src="images/heart-icon.png";
-                //sessionStorage.setItem('tag', 'hello');
+                sessionStorage.setItem('HP', 'YES');
+                sessionStorage.setItem('HP-NAME', 'Harry Potter');
+                sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
+                alert(sessionStorage.getItem('HP'));
             }else{
                 //alert("red");
                 document.getElementById("h1").src="images/white-heart-icon.png";
                 //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('HP', 'NO');
+                alert(sessionStorage.getItem('HP'));
                 
             }
             //alert(filename);
@@ -150,7 +155,7 @@
                         </div>
 
                         <div class = "favClass">
-                            <img id = "h1" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="openOnImageClick()"/>
+                            <img id = "h1" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="hpClick()"/>
                         </div>
 
                         <div class="cal-arrrow trndngarr">
