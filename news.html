@@ -10,7 +10,7 @@
         $("#mypanel").trigger("updatelayout");
         $("#mypanel1").trigger("updatelayout");
 
-        function ukClick() {
+        function hpClick() {
 
 
             //document.getElementById("h1").src="images/heart-icon.png";
@@ -19,92 +19,16 @@
             if (filename == "white-heart-icon.png") {
                 // alert("white");
                 document.getElementById("h1").src = "images/heart-icon.png";
-                sessionStorage.setItem('UK', 'YES');
-                sessionStorage.setItem('UK-NAME', 'U.K.'\'s Booksellers');
-                sessionStorage.setItem('UK-DESCRIPTION', 'Tim Godfray, chief executiveof the U.K-based trade organization');
-                sessionStorage.setItem('UK-IMAGE', 'images/fs.jpg');
-                alert(sessionStorage.getItem('UK'));
+                sessionStorage.setItem('HP', 'YES');
+                sessionStorage.setItem('HP-NAME', 'Harry Potter');
+                sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
+                alert(sessionStorage.getItem('HP'));
             } else {
                 //alert("red");
                 document.getElementById("h1").src = "images/white-heart-icon.png";
                 //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('UK', 'NO');
-                alert(sessionStorage.getItem('UK'));
-
-            }
-            //alert(filename);
-
-        }
-        function pfClick() {
-
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h1").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h1").src = "images/heart-icon.png";
-                sessionStorage.setItem('UK', 'YES');
-                sessionStorage.setItem('UK-NAME', 'U.K.'\'s Booksellers');
-                sessionStorage.setItem('UK-DESCRIPTION', 'Tim Godfray, chief executiveof the U.K-based trade organization');
-                sessionStorage.setItem('UK-IMAGE', 'images/fs.jpg');
-                alert(sessionStorage.getItem('UK'));
-            } else {
-                //alert("red");
-                document.getElementById("h1").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('UK', 'NO');
-                alert(sessionStorage.getItem('UK'));
-
-            }
-            //alert(filename);
-
-        }
-        function pwClick() {
-
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h1").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h1").src = "images/heart-icon.png";
-                sessionStorage.setItem('UK', 'YES');
-                sessionStorage.setItem('UK-NAME', 'U.K.'\'s Booksellers');
-                sessionStorage.setItem('UK-DESCRIPTION', 'Tim Godfray, chief executiveof the U.K-based trade organization');
-                sessionStorage.setItem('UK-IMAGE', 'images/fs.jpg');
-                alert(sessionStorage.getItem('UK'));
-            } else {
-                //alert("red");
-                document.getElementById("h1").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('UK', 'NO');
-                alert(sessionStorage.getItem('UK'));
-
-            }
-            //alert(filename);
-
-        }
-        function cbClick() {
-
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h1").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h1").src = "images/heart-icon.png";
-                sessionStorage.setItem('UK', 'YES');
-                sessionStorage.setItem('UK-NAME', 'U.K.'\'s Booksellers');
-                sessionStorage.setItem('UK-DESCRIPTION', 'Tim Godfray, chief executiveof the U.K-based trade organization');
-                sessionStorage.setItem('UK-IMAGE', 'images/fs.jpg');
-                alert(sessionStorage.getItem('UK'));
-            } else {
-                //alert("red");
-                document.getElementById("h1").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('UK', 'NO');
-                alert(sessionStorage.getItem('UK'));
+                sessionStorage.setItem('HP', 'NO');
+                alert(sessionStorage.getItem('HP'));
 
             }
             //alert(filename);
@@ -208,29 +132,20 @@
             <div class="listCont trending_list retrndng">
 
 
-<<<<<<< HEAD
-                <ul data-role="listview" data-inset="true" id="test">
-                    <li id="item1">
-=======
                 <ul data-role="listview" data-inset="true" id="test" class="news">
                     <li id="item1"><a href="news1.html">
->>>>>>> 9d7a434d41c35e56e7f1b668ac4cf8bf98429415
 
                         <div class="trending_list_img">
-                            <a href="news1.html">
                             <img src="images/fs.jpg">
-                        </a>
                         </div>
 
                         <div class="trending_list_desc">
-                            <a href="news1.html">
                             <h2>U.K.'s Booksellers Association Restructures</h2>
                             <p>Tim Godfray, chief executive of the U.K.-based..</p>
-                        </a>
                         </div>
 
                         <div class="favClass">
-                            <img id = "h1" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="ukClick()"/>
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
                         <div class="cal-arrrow news-arr">
@@ -238,23 +153,19 @@
                         </div>
 
                     </a></li>
-                    <li id="item2">
+                    <li id="item2"><a href="news2.html">
 
                         <div class="trending_list_img">
-                            <a href="news2.html">
                             <img src="images/s.jpg">
-                        </a>
                         </div>
 
                         <div class="trending_list_desc">
-                            <a href="news2.html">
                             <h2>Popular Fiction Topped December International Bestseller Lists</h2>
                             <p>French readers still have a hankering for WWII fiction.</p>
-                        </a>
                         </div>
 
                         <div class="favClass">
-                            <img id = "h2"src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="pfClick()"/>
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
                         <div class="cal-arrrow news-arr">
@@ -262,24 +173,20 @@
                         </div>
 
                     </a></li>
-                    <li id="item3">
+                    <li id="item3"><a href="news3.html">
 
                         <div class="trending_list_img">
-                            <a href="news2.html">
                             <img src="images/g.jpg">
-                        </a>
                         </div>
 
                         <div class="trending_list_desc">
-                            <a href="news2.html">
                             <h2>Prince William launches poetry competition to find a Wilfred Owen for new
                                 generation</h2>
                             <p>Once heard, the haunting words of Wilfred Owen and his First </p>
-                        </a>
                         </div>
 
                         <div class="favClass">
-                            <img id = "h3" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="pwClick()"/>
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
                         <div class="cal-arrrow news-arr">
@@ -287,23 +194,19 @@
                         </div>
 
                     </a></li>
-                    <li id="item4">
+                    <li id="item4"><a href="news4.html">
 
                         <div class="trending_list_img">
-                            <a href="news2.html">
                             <img src="images/r.jpg">
-                        </a>
                         </div>
 
                         <div class="trending_list_desc">
-                            <a href="news2.html">
                             <h2>Canadian Book Sales Down in 2017</h2>
                             <p>Unit sales of print books fell 4% in 2017 compared to 2016 in</p>
-                        </a>
                         </div>
 
                         <div class="favClass">
-                            <img id = "h4" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="cbClick()"/>
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
                         </div>
 
                         <div class="cal-arrrow news-arr">

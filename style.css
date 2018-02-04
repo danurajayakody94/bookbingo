@@ -1374,6 +1374,29 @@ label.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-radio-off {
 .mr-gms .trending_list_desc {
     width: 70%;
 }
+
+.no-pdng {
+    width: 100%;
+    padding: 0;
+}
+
+.fav-bdy {
+    top: 63px;
+    height: 605px;
+}
+
+div#tabs {
+    padding: 0;
+}
+
+.ui-tabs-anchor {
+    padding: 20px 0px;
+    border-left: 1px solid seashell;
+}
+
+.news .trending_list_desc {
+    width: 53%;
+}
 /*
 ****
 ********
@@ -1697,6 +1720,10 @@ and (orientation: landscape) {
         margin: 10px 29%;
     }
 
+    .news .trending_list_desc {
+        width: 60%;
+    }
+
 }
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
@@ -1970,6 +1997,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
         height: 903px;
         min-height: 500px !important;
     }
+
+    .fav-bdy {
+        height: 926px;
+    }
+
+    .news .trending_list_desc {
+        width: 54%;
+    }
 }
 
 /* Landscape */
@@ -2104,6 +2139,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .quiz-bdy {
         height: 621px;
+    }
+
+    .fav-bdy {
+        height: 670px;
+    }
+
+    .news .trending_list_desc {
+        width: 58%;
     }
 
 }
