@@ -108,6 +108,7 @@
         }
 
 
+
         /*function getName() {
          var fullPath = document.getElementById("img1").src;
          var filename = fullPath.replace(/^.*[\\\/]/, '');
@@ -116,6 +117,27 @@
 
          document.getElementById("result").value = filename;
          }*/
+    </script>
+    <script type='text/javascript'>
+        $(window).load(function(){
+            sessionStorage.setItem('HP', 'YES');
+            
+
+            if(sessionStorage.getItem('HP')=='YES'){
+                var value = sessionStorage.getItem('HP');
+                var listItem = "<li>" + value + "</li>";
+                    $('#List').append(listItem);
+            }
+            
+            $('#List').listview();
+
+        });
+    </script>
+    <script type='text/javascript'>
+        $(window).load(function(){
+            $('#bookList').append('<li>Item1</li>');
+            $('#bookList').listview();
+        });
     </script>
 
 </head>
@@ -213,57 +235,13 @@
                         </ul>
                     </div>
                     <div id="book" class="ui-body-d ui-content no-pdng">
-                        <ul data-role="listview" data-inset="true">
-                            <li id="item6"><a href="#">
-
-                                <div class="trending_list_img">
-                                    <img src="images/gg.jpg">
-                                </div>
-
-                                <div class="trending_list_desc trnd-new">
-                                    <h2>Gulliver's Travels</h2>
-                                    <p>Jonathan Swift</p>
-                                </div>
-
-                                <div class="trending_place">&nbsp;</div>
-
-                                <div class="favClass">
-                                    <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                                </div>
-
-                                <div class="cal-arrrow trndngarr">
-                                    <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                                </div>
-
-                            </a></li>
-
-                            <li id="item7"><a href="#">
-
-                                <div class="trending_list_img">
-                                    <img src="images/bs.jpg">
-                                </div>
-
-                                <div class="trending_list_desc trnd-new">
-                                    <h2>The Outsiders</h2>
-                                    <p>S. E Hinton</p>
-                                </div>
-
-                                <div class="trending_place">&nbsp;</div>
-
-                                <div class="favClass">
-                                    <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                                </div>
-
-                                <div class="cal-arrrow trndngarr">
-                                    <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                                </div>
-
-                            </a></li>
+                        <ul data-role="listview" id="bookList"data-inset="true">
+                            
                         </ul>
                     </div>
 
                     <div id="news" class="ui-body-d ui-content no-pdng">
-                        <ul data-role="listview" data-inset="true">
+                        <ul data-role="listview" id="List" data-inset="true">
 
                         </ul>
                     </div>
