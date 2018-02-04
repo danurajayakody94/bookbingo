@@ -8,8 +8,8 @@
     <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel = "stylesheet" href = "style.css">
     <script>
-     $( "#mypanel" ).trigger( "updatelayout" );
-     $( "#mypanel1" ).trigger( "updatelayout" );
+        $("#mypanel").trigger("updatelayout");
+        $("#mypanel1").trigger("updatelayout");
     </script>
 
 </head>
@@ -26,19 +26,19 @@
         <div class="book_bingo_header_top">
             <div class="mob-menu">
                 <a href="#mypanel">
-                    <img src="images/menu.png">
+                    <img class="mob-sidenav" src="images/menu.png">
                 </a>
             </div>
 
             <h1><img src="images/icon.png">Book Categories</h1>
             <div class="mob-setting">
-              <a href="#mypanel1">
-               <img src="images/more.png">
-              </a>
+                <a href="#mypanel1">
+                    <img src="images/more.png">
+                </a>
             </div>
         </div>
 
-        <div id="list" class="hdr_crsl">
+        <div id="list" class="hdr_crsl mob-sidenav">
             <div class="wrapper">
                 <div class="element" style="margin-left: 5px;">
                     <a href="bookCatagryFairy.html">
@@ -95,7 +95,7 @@
 
         </div>
 
-        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom mob-sidenav">
 
             <!-- panel content goes here -->
             <div id="profile_image" class="profbg-img">
@@ -127,7 +127,7 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="login.html">Sign Out</a></li>
-                  </ul>
+                </ul>
             </div>
         </div><!-- /panel -->
 
@@ -136,95 +136,242 @@
 
     <div data-role = "main" class = "ui-content trending_body">
 
-        <div class="listCont trending_list">
-            <div class="cat-row">
-                <div class="cat-itm">
-                    <a href="RHH.html">
-                        <img src="images/c1.jpg">
-                    </a>
-                </div>
+        <div class="side-nav-custom tab-side-nav">
 
-                <div class="cat-itm">
-                    <a href="JBH.html">
-                        <img src="images/c2.jpg">
-                    </a>
-                </div>
+            <!-- panel content goes here -->
+            <div id="profile_imagetab" class="profbg-img">
+                <img alt="" src="images/profile_pic.jpg" class="tab-img">
+                <h2>Sachith Perera</h2>
+                <p>sachith.perera@revport.net</p>
+            </div>
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
+                    <li><a href="leaderboard.html">Leader Board</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="myfav.html">My Favourites</a></li>
+                    <li><a href="completetasks.html">Complete Tasks</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="moregames.html">More Games</a></li>
+                </ul>
+            </div>
+        </div><!-- /panel -->
 
-                <div class="cat-itm">
-                    <a href="PNH.html">
-                        <img src="images/c3.jpg">
-                    </a>
+        <div class="tab_body fith-fltrs">
+
+            <div class="tab-side-nav tab-srchbx">
+                <div id="list2" class="hdr_crsl">
+                    <div class="wrapper">
+                        <div class="element" style="margin-left: 5px;">
+                            <a href="bookCatagryFairy.html">
+                                <img src="images/fry.png">
+                            </a>
+                        </div>
+                        <div class="element">
+                            <a href="bookCatagryScience.html">
+                                <img src="images/scns.png">
+                            </a>
+                        </div>
+                        <div class="element home-catgry-crnt">
+                            <a href="bookCatagryHstry.html">
+                                <img src="images/hstry.png">
+                            </a>
+                        </div>
+                        <div class="element">
+                            <a href="bookCatagryChlrn.html">
+                                <img src="images/fry.png">
+                            </a>
+                        </div>
+                        <div class="element">
+                            <img src="images/fry.png">
+                        </div>
+                        <div class="element">
+                            <img src="images/fry.png">
+                        </div>
+                        <div class="element dno1">
+                            <img src="images/fry.png">
+                        </div>
+                        <div class="element dno1">
+                            <img src="images/fry.png">
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="txt" style="margin-left: 5px;">Fairy</div>
+                        <div class="txt">Science</div>
+                        <div class="txt">History</div>
+                        <div class="txt">Children</div>
+                        <div class="txt">Romantic</div>
+                        <div class="txt">Horror</div>
+                        <div class="txt dno1">Fantasy</div>
+                        <div class="txt dno1">Comics</div>
+                    </div>
+
                 </div>
+                <!-- end -->
+
             </div>
 
-            <div class="cat-row">
-                <div class="cat-itm">
-                    <a href="ABH.html">
-                        <img src="images/c4.jpg">
-                    </a>
+
+            <div class="listCont trending_list">
+                <div class="cat-row">
+                    <div class="cat-itm">
+                        <a href="RHC.html">
+                            <img src="images/c1.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="ABC.html">
+                            <img src="images/c4.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="MWC.html">
+                            <img src="images/c6.jpg">
+                        </a>
+                    </div>
                 </div>
 
-                <div class="cat-itm">
-                    <a href="">
-                        <img src="images/c5.jpg">
-                    </a>
+                <div class="cat-row">
+                    <div class="cat-itm">
+                        <a href="JBC.html">
+                            <img src="images/c2.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="">
+                            <img src="images/c5.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="">
+                            <img src="images/c3.jpg">
+                        </a>
+                    </div>
                 </div>
 
-                <div class="cat-itm">
-                    <a href="">
-                        <img src="images/c6.jpg">
-                    </a>
+                <div class="cat-row">
+                    <div class="cat-itm">
+                        <a href="ABC.html">
+                            <img src="images/c4.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="RHC.html">
+                            <img src="images/c1.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="MWC.html">
+                            <img src="images/c6.jpg">
+                        </a>
+                    </div>
                 </div>
+
+                <div class="cat-row">
+                    <div class="cat-itm">
+                        <a href="RHC.html">
+                            <img src="images/c1.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="JBC.html">
+                            <img src="images/c2.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="">
+                            <img src="images/c3.jpg">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cat-row">
+                    <div class="cat-itm">
+                        <a href="RHC.html">
+                            <img src="images/c1.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="JBC.html">
+                            <img src="images/c2.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="">
+                            <img src="images/c3.jpg">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cat-row">
+                    <div class="cat-itm">
+                        <a href="RHC.html">
+                            <img src="images/c1.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="JBC.html">
+                            <img src="images/c2.jpg">
+                        </a>
+                    </div>
+
+                    <div class="cat-itm">
+                        <a href="">
+                            <img src="images/c3.jpg">
+                        </a>
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="cat-row">
-                <div class="cat-itm">
-                    <a href="RHH.html">
-                        <img src="images/c1.jpg">
-                    </a>
-                </div>
-
-                <div class="cat-itm">
-                    <a href="JBH.html">
-                        <img src="images/c2.jpg">
-                    </a>
-                </div>
-
-                <div class="cat-itm">
-                    <a href="PNH.html">
-                        <img src="images/c3.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="cat-row">
-                <div class="cat-itm">
-                    <a href="ABH.html">
-                        <img src="images/c4.jpg">
-                    </a>
-                </div>
-
-                <div class="cat-itm">
-                    <a href="">
-                        <img src="images/c5.jpg">
-                    </a>
-                </div>
-
-                <div class="cat-itm">
-                    <a href="">
-                        <img src="images/c6.jpg">
-                    </a>
-                </div>
+            <div data-role="footer" class="book_bingo_foter tab-footr">
+                <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                    <ul>
+                        <li>
+                            <a href="trendings.html" data-icon="trendingIcon"
+                               class="bottom_menu_item">
+                                <img src="images/trending.png">
+                                <p>Trending</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                                <img src="images/home.png">
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                            <img src="images/map.png">
+                            <p>Map</p>
+                        </a></li>
+                        <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                            <img src="images/events.png">
+                            <p>Events</p>
+                        </a></li>
+                    </ul>
+                </div><!-- /navbar -->
             </div>
         </div>
-
     </div>
 
 
 
     <div data-role = "footer" class="book_bingo_foter">
         <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
-            <ul>
+            <ul class="mob-footr">
                 <li>
                     <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
                         <img src="images/trending.png">

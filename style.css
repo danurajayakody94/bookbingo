@@ -1577,6 +1577,10 @@ and (orientation: landscape) {
         bottom: 10px;
     }
 
+    .nw-dpg p {
+        width: 70% !important;
+    }
+
 }
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
@@ -1797,6 +1801,29 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .tab-hdr-icn {
         width: 30px !important;
     }
+
+    .detl-pg-bdy {
+        top: 349px;
+    }
+
+    .bookdtl .mob-menu {
+        width: 7%;
+        padding: 20px;
+    }
+
+    .book-ctgry-bdy .trending_body {
+        top: 98px;
+    }
+
+    .book-ctgry-bdy .listCont.trending_list {
+        float: left;
+        max-height: 2000px;
+        height: 801px;
+    }
+
+    .dno1 {
+        display: none !important;
+    }
 }
 
 /* Landscape */
@@ -1893,6 +1920,16 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .abt-tab-bdy {
         top: 15px;
+    }
+
+    .dno1 {
+        display: inline-block !important;
+    }
+
+    .book-ctgry-bdy .listCont.trending_list {
+        float: left;
+        max-height: 2000px;
+        height: 528px;
     }
 
 }
