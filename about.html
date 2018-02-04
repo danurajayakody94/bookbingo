@@ -44,11 +44,11 @@
         <div class="book_bingo_header_top">
             <div class="mob-menu">
               <a href="#mypanel">
-              <img src="images/menu.png">
+                  <img class="mob-sidenav" src="images/menu.png">
               </a>
             </div>
 
-            <h1><img src="images/icon.png">Our Team</h1>
+            <h1><img class="tab-hdr-icn" src="images/icon.png">Our Team</h1>
             <div class="mob-setting">
               <a href="#mypanel1">
                <img src="images/more.png">
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom mob-sidenav">
 
             <!-- panel content goes here -->
             <div id="profile_image" class="profbg-img">
@@ -97,6 +97,28 @@
 
     <div data-role="main" class="ui-content trending_body about-bdy">
 
+        <div class="side-nav-custom tab-side-nav">
+
+            <!-- panel content goes here -->
+            <div id="profile_imagetab" class="profbg-img">
+                <img alt="" src="images/profile_pic.jpg" class="tab-img">
+                <h2>Sachith Perera</h2>
+                <p>sachith.perera@revport.net</p>
+            </div>
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
+                    <li><a href="leaderboard.html">Leader Board</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="myfav.html">My Favourites</a></li>
+                    <li><a href="completetasks.html">Complete Tasks</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="moregames.html">More Games</a></li>
+                </ul>
+            </div>
+        </div><!-- /panel -->
+
+        <div class="tab_body abt-tab-bdy">
 
         <div class="listCont trending_list ldr-brd">
 
@@ -176,11 +198,39 @@
               </ul>
         </div>
 
+            <div data-role="footer" class="book_bingo_foter tab-footr abt-tb">
+                <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                    <ul>
+                        <li>
+                            <a href="trendings.html" data-icon="trendingIcon"
+                               class="bottom_menu_item menu_current">
+                                <img src="images/trending.png">
+                                <p>Trending</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                                <img src="images/home.png">
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                            <img src="images/map.png">
+                            <p>Map</p>
+                        </a></li>
+                        <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                            <img src="images/events.png">
+                            <p>Events</p>
+                        </a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
     </div>
 
-    <div data-role = "footer" class="book_bingo_foter">
+    <div data-role="footer" class="book_bingo_foter rr">
         <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
-            <ul>
+            <ul class="mob-footr">
                 <li>
                     <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
                         <img src="images/trending.png">

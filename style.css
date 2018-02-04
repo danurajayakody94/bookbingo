@@ -1272,7 +1272,7 @@ div.txt {
     display: none;
 }
 
-.trending_list_desc a {
+.trnd-new a {
     text-decoration: none;
     color: #000 !important;
 }
@@ -1780,6 +1780,23 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .bookdtl .book_bingo_header_top h1 img {
         width: 30px;
     }
+
+    .abt-tb ul li a {
+        background: #00aeef !important;
+    }
+
+    .about-bdy .trending_list {
+        max-height: 2000px;
+        height: 928px;
+    }
+
+    .abt-tab-bdy {
+        top: 0;
+    }
+
+    .tab-hdr-icn {
+        width: 30px !important;
+    }
 }
 
 /* Landscape */
@@ -1867,6 +1884,15 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .bookdtl .detl-pg-hdr img {
         padding: 0 45%;
+    }
+
+    .about-bdy .trending_list {
+        max-height: 2000px;
+        height: 656px;
+    }
+
+    .abt-tab-bdy {
+        top: 15px;
     }
 
 }
