@@ -7,56 +7,67 @@
     <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel = "stylesheet" href = "style.css">
     <script>
-     $( "#mypanel" ).trigger( "updatelayout" );
-     $( "#mypanel1" ).trigger( "updatelayout" );
+        $("#mypanel").trigger("updatelayout");
+        $("#mypanel1").trigger("updatelayout");
+
+        function hpClick() {
+
+
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h1").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if (filename == "white-heart-icon.png") {
+                // alert("white");
+                document.getElementById("h1").src = "images/heart-icon.png";
+                sessionStorage.setItem('HP', 'YES');
+                sessionStorage.setItem('HP-NAME', 'Harry Potter');
+                sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
+                alert(sessionStorage.getItem('HP'));
+            } else {
+                //alert("red");
+                document.getElementById("h1").src = "images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('HP', 'NO');
+                alert(sessionStorage.getItem('HP'));
+
+            }
+            //alert(filename);
+
+        }
+
+        /*function getName() {
+         var fullPath = document.getElementById("img1").src;
+         var filename = fullPath.replace(/^.*[\\\/]/, '');
+         // or, try this,
+         // var filename = fullPath.split("/").pop();
+
+         document.getElementById("result").value = filename;
+         }*/
     </script>
 
 </head>
 
 
-
 <body>
-<div data-role="page" id="pageone" class="newspg">
-
-    <!--S <script type="text/javascript">
-       //item 1
-    // $(document).bind("pageinit", function(){
-    //   $("#test ui li").click(function(){
-    //     var argValue = $("#item1").val();
-    //     var id = $(this).attr("id"); // Get the ID
-    //     alert($(this).attr("id"));
-    //     $.mobile.changePage("bookDetailVC.html",{data:{arg1:id}});
-    //     //or you could pass parameters in the URL
-    //     //$.mobile.changePage("page2.html?arg1=Ram");
-    //   });
-    // });
-
-    $(document).on("click", "#test li" ,function (event) {
-      var id = $(this).attr("id"); // Get the ID
-   alert($(this).text());
-   alert(id);
-   $.mobile.changePage("bookDetailVC.html",{data:{arg1:id}});
-});
-
-  </script>-->
+<div data-role="page" id="pageone" class="trendng">
 
     <div class="book_bingo_hdr" data-role = "header" data-theme="b">
         <div class="book_bingo_header_top">
             <div class="mob-menu">
                 <a href="#mypanel">
-                    <img src="images/menu.png">
+                    <img class="mob-sidenav" src="images/menu.png">
                 </a>
             </div>
 
             <h1><img src="images/icon.png">News</h1>
             <div class="mob-setting">
-              <a href="#mypanel1">
-               <img src="images/more.png">
-              </a>
+                <a href="#mypanel1">
+                    <img src="images/more.png">
+                </a>
             </div>
         </div>
 
-        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom mob-sidenav">
 
             <!-- panel content goes here -->
             <div id="profile_image" class="profbg-img">
@@ -88,7 +99,7 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="login.html">Sign Out</a></li>
-                  </ul>
+                </ul>
             </div>
         </div><!-- /panel -->
 
@@ -96,159 +107,212 @@
 
 
     <div data-role = "main" class = "ui-content trending_body rebdytrndng">
+        <div class="side-nav-custom tab-side-nav">
+
+            <!-- panel content goes here -->
+            <div id="profile_imagetab" class="profbg-img">
+                <img alt="" src="images/profile_pic.jpg" class="tab-img">
+                <h2>Sachith Perera</h2>
+                <p>sachith.perera@revport.net</p>
+            </div>
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
+                    <li><a href="leaderboard.html">Leader Board</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="myfav.html">My Favourites</a></li>
+                    <li><a href="completetasks.html">Complete Tasks</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="moregames.html">More Games</a></li>
+                </ul>
+            </div>
+        </div><!-- /panel -->
+
+        <div class="tab_body">
+            <div class="listCont trending_list retrndng">
 
 
-        <div class="listCont trending_list retrndng">
+                <ul data-role="listview" data-inset="true" id="test">
+                    <li id="item1"><a href="news1.html">
 
-            <ul data-role="listview" data-inset="true" id = "test">
-                <li id="item1"><a href="news1.html">
+                        <div class="trending_list_img">
+                            <img src="images/fs.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/fs.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>U.K.'s Booksellers Association Restructures</h2>
+                            <p>Tim Godfray, chief executive of the U.K.-based..</p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>U.K.'s Booksellers Association Restructures</h2>
-                        <p>Tim Godfray, chief executive of the U.K.-based..</p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                    <li id="item2"><a href="news2.html">
 
-                </a></li>
-                <li id="item2"><a href="news2.html">
+                        <div class="trending_list_img">
+                            <img src="images/s.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/s.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>Popular Fiction Topped December International Bestseller Lists</h2>
+                            <p>French readers still have a hankering for WWII fiction.</p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>Popular Fiction Topped December International Bestseller Lists</h2>
-                        <p>French readers still have a hankering for WWII fiction.</p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                    <li id="item3"><a href="news3.html">
 
-                </a></li>
-                <li id="item3"><a href="news3.html">
+                        <div class="trending_list_img">
+                            <img src="images/g.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/g.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>Prince William launches poetry competition to find a Wilfred Owen for new
+                                generation</h2>
+                            <p>Once heard, the haunting words of Wilfred Owen and his First </p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>Prince William launches poetry competition to find a Wilfred Owen for new generation</h2>
-                        <p>Once heard, the haunting words of Wilfred Owen and his First </p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                    <li id="item4"><a href="news4.html">
 
-                </a></li>
-                <li id="item4"><a href="news4.html">
+                        <div class="trending_list_img">
+                            <img src="images/r.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/r.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>Canadian Book Sales Down in 2017</h2>
+                            <p>Unit sales of print books fell 4% in 2017 compared to 2016 in</p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>Canadian Book Sales Down in 2017</h2>
-                        <p>Unit sales of print books fell 4% in 2017 compared to 2016 in</p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                    <li id="item5"><a href="#">
 
-                </a></li>
-                <li id="item5"><a href="#">
+                        <div class="trending_list_img">
+                            <img src="images/m.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/m.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>Prix Goncourt Winner Tops In France</h2>
+                            <p>In France, the fiction bestseller list at the end of November </p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>Prix Goncourt Winner Tops In France</h2>
-                        <p>In France, the fiction bestseller list at the end of November </p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                    <li id="item6"><a href="#">
 
-                </a></li>
-                <li id="item6"><a href="#">
+                        <div class="trending_list_img">
+                            <img src="images/b.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/b.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>Origin Rules The World</h2>
+                            <p>Dan Brown’s latest novel, Origin, was in the top spot </p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>Origin Rules The World</h2>
-                        <p>Dan Brown’s latest novel, Origin, was in the top spot </p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                    <li id="item7"><a href="#">
 
-                </a></li>
-                <li id="item7"><a href="#">
+                        <div class="trending_list_img">
+                            <img src="images/c.jpg">
+                        </div>
 
-                    <div class="trending_list_img">
-                        <img src="images/c.jpg">
-                    </div>
+                        <div class="trending_list_desc">
+                            <h2>Amanuta's Coming-of-Age Story</h2>
+                            <p>Chilean picture book publisher Editorial Amanuta explores</p>
+                        </div>
 
-                    <div class="trending_list_desc">
-                        <h2>Amanuta's Coming-of-Age Story</h2>
-                        <p>Chilean picture book publisher Editorial Amanuta explores</p>
-                    </div>
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
 
-                    <div class = "favClass">
-                        <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                    </div>
+                        <div class="cal-arrrow news-arr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
+                        </div>
 
-                    <div class = "cal-arrrow news-arr">
-                        <img src="images/leftblack.png" class="ui-li-icon-right" width="30%"/>
-                    </div>
+                    </a></li>
+                </ul>
 
-                </a></li>
-            </ul>
+
+            </div>
+
+            <div data-role="footer" class="book_bingo_foter tab-footr">
+                <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                    <ul>
+                        <li>
+                            <a href="trendings.html" data-icon="trendingIcon"
+                               class="bottom_menu_item">
+                                <img src="images/trending.png">
+                                <p>Trending</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                                <img src="images/home.png">
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                            <img src="images/map.png">
+                            <p>Map</p>
+                        </a></li>
+                        <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                            <img src="images/events.png">
+                            <p>Events</p>
+                        </a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
         </div>
 
     </div>
 
     <div data-role = "footer" class="book_bingo_foter">
         <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
-            <ul>
+            <ul class="mob-footr">
                 <li>
                     <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
                         <img src="images/trending.png">
