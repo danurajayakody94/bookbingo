@@ -134,7 +134,6 @@ hr {
 }
 
 .favClass {
-
     float: left;
 }
 
@@ -717,6 +716,11 @@ div.txt {
     float: left;
     background: #00aeef !important;
     min-height: 475px;
+    z-index: 99999999999;
+}
+
+.ui-panel-open {
+    position: fixed;
 }
 
 .dark-over-lay {
@@ -1260,6 +1264,14 @@ div.txt {
     font-weight: 400;
 }
 
+.tab-side-nav {
+    display: none;
+}
+
+.tab-footr {
+    display: none;
+}
+
 
 /*
 ****
@@ -1558,6 +1570,147 @@ and (orientation: landscape) {
 
     .login-bdy {
         bottom: 10px;
+    }
+
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .tab-side-nav {
+        display: block;
+    }
+
+    .trending_body {
+        top: 98px;
+        bottom: 0px;
+    }
+
+    .mob-sidenav {
+        display: none;
+    }
+
+    .side-nav-custom.tab-side-nav {
+        width: 40%;
+        float: left;
+        top: 0px;
+        bottom: 0px;
+    }
+
+    .tab-img {
+        width: 60%;
+        float: left;
+        border-radius: 50%;
+        padding: 10px 20%;
+    }
+
+    .profbg-img {
+        background-size: 315px 306px !important;
+        float: left;
+    }
+
+    .main-nav-opt-list {
+        float: left;
+        width: 100%;
+    }
+
+    .main-nav-opt-list ul {
+        margin: 0em !important;
+    }
+
+    .tab_body {
+        width: 60%;
+        float: left;
+        right: 0px;
+        position: absolute;
+        top: -15px;
+    }
+
+    .book_bingo_header_top h1 {
+        width: 68%;
+        float: left;
+        margin: 29px 0;
+        text-align: center;
+        font-size: 30px;
+        text-shadow: none;
+    }
+
+    .mob-setting {
+        width: 8%;
+        padding: 18px 0;
+        float: right;
+    }
+
+    .side-nav-custom.ui-panel {
+        min-height: 800px;
+        top: 98px;
+    }
+
+    .mob-footr {
+        display: none !important;
+    }
+
+    .tab-footr {
+        display: block;
+    }
+
+    .retrndng {
+        min-height: 940px;
+    }
+
+    .profbg-img h2, .profbg-img p {
+        text-align: center;
+        font-weight: 400;
+        text-shadow: none;
+        margin: 0;
+    }
+
+    .profbg-img p {
+        margin-bottom: 35px;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .tab-img {
+        width: 40%;
+        float: left;
+        border-radius: 50%;
+        padding: 10px 30%;
+    }
+
+    .side-nav-custom.tab-side-nav {
+        top: 20px;
+    }
+
+    .retrndng {
+        min-height: 659px;
+    }
+
+    .tab_body {
+        top: 10px;
+    }
+
+    .book_bingo_header_top h1 {
+        margin: 36px 0;
+        font-size: 35px;
+    }
+
+    .mob-setting {
+        width: 6%;
+        padding: 28px 0;
+    }
+
+    .side-nav-custom.ui-panel {
+        top: 118px;
     }
 
 }
