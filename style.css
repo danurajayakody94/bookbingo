@@ -1277,6 +1277,45 @@ div.txt {
     color: #000 !important;
 }
 
+.mob-lnd-top {
+    max-height: 600px;
+    top: 92px;
+    position: absolute;
+    width: 100%;
+    float: left;
+}
+
+.mob-lnd-top .hdr-ryt {
+    text-align: right;
+}
+
+.cntct-frm {
+    width: 96%;
+    padding: 40px 2%;
+    float: left;
+}
+
+.cntct-frm form .form-group {
+    margin: 20px 10px;
+}
+
+.cntct-frm form .form-group .ui-shadow-inset {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 2px 5px;
+}
+
+.cntct-frm form .form-group button {
+    border-radius: 0;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background: #00aeef;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 300;
+    width: 45%;
+    margin: 60px 28%;
+}
+
 
 /*
 ****
@@ -1581,6 +1620,10 @@ and (orientation: landscape) {
         width: 70% !important;
     }
 
+    .cntct-frm form .form-group button {
+        margin: 40px 28%;
+    }
+
 }
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
@@ -1824,6 +1867,31 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .dno1 {
         display: none !important;
     }
+
+    .cntct-pg-ht {
+        min-height: 863px;
+    }
+
+    .scl-btns .fb-login-button.fb_iframe_widget.fb_iframe_widget_fluid {
+        margin: 10px 31% !important;
+    }
+
+    .ggl-lgn {
+        width: 39%;
+        padding: 10px 31%;
+    }
+
+    .scl-imgs img {
+        width: 30%;
+        padding: 95px 35%;
+    }
+
+    .main-lgo img {
+        width: 24%;
+        padding: 10px 38%;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
 }
 
 /* Landscape */
@@ -1930,6 +1998,30 @@ and (-webkit-min-device-pixel-ratio: 1) {
         float: left;
         max-height: 2000px;
         height: 528px;
+    }
+
+    .cntct-pg-ht {
+        min-height: 579px;
+    }
+
+    .main-lgo img {
+        width: 16%;
+        padding: 10px 42%;
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+
+    .scl-btns .fb-login-button.fb_iframe_widget.fb_iframe_widget_fluid {
+        margin: 10px 36% !important;
+    }
+
+    .ggl-lgn {
+        width: 29%;
+        padding: 10px 36%;
+    }
+
+    .main-lgo.scl-imgs {
+        padding-top: 30px;
     }
 
 }
