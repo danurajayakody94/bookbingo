@@ -1737,6 +1737,44 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .tab-evnt-cal a img {
         width: 7%;
     }
+
+    .bookdtl .detl-pg-hdr img {
+        padding: 0 43%;
+    }
+
+    .bookdtl .prfl-dtl {
+        top: 350px !important;
+    }
+
+    .bookdtl .pie-wrapper {
+        height: 1.5em;
+        width: 1.5em;
+        margin: 30px 22%;
+    }
+
+    .bookdtl .pie-wrapper .pie .half-circle {
+        height: 180px;
+        width: 180px;
+    }
+
+    .bookdtl .pie-wrapper.progress-75 .pie .left-side {
+        -webkit-transform: rotate(257deg);
+        transform: rotate(257deg);
+    }
+
+    .bookdtl .pie-wrapper.progress-75 .pie .right-side {
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+
+    .bookdtl .pie-wrapper .label {
+        top: 2.3em;
+        font-size: 27px;
+    }
+
+    .bookdtl .book_bingo_header_top h1 img {
+        width: 30px;
+    }
 }
 
 /* Landscape */
@@ -1816,6 +1854,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .event-tab-vw {
         height: 550px;
+    }
+
+    .bookdtl .pie-wrapper {
+        margin: 30px 31%;
+    }
+
+    .bookdtl .detl-pg-hdr img {
+        padding: 0 45%;
     }
 
 }
