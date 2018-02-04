@@ -11,8 +11,7 @@
         $( "#mypanel1" ).trigger( "updatelayout" );
 
          function hpClick(){
-
-            
+   
             //document.getElementById("h1").src="images/heart-icon.png";
             var fullPath = document.getElementById("h1").src;
             var filename = fullPath.replace(/^.*[\\\/]/, '');
@@ -21,6 +20,7 @@
                 document.getElementById("h1").src="images/heart-icon.png";
                 sessionStorage.setItem('HP', 'YES');
                 sessionStorage.setItem('HP-NAME', 'Harry Potter');
+                sessionStorage.setItem('HP-AUTHOR', 'J. K. Rowling');
                 sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
                 alert(sessionStorage.getItem('HP'));
             }else{
@@ -34,6 +34,79 @@
             //alert(filename);
 
         }
+        function twClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h2").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h2").src="images/heart-icon.png";
+                sessionStorage.setItem('TW', 'YES');
+                sessionStorage.setItem('TW-NAME', 'Twilight');
+                sessionStorage.setItem('TW-AUTHOR', 'Stephenie Meyer');
+                sessionStorage.setItem('TW-IMAGE', 'images/ffe.jpg');
+                alert(sessionStorage.getItem('TW'));
+            }else{
+                //alert("red");
+                document.getElementById("h2").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('TW', 'NO');
+                alert(sessionStorage.getItem('TW'));
+                
+            }
+            //alert(filename);
+
+        }
+        function lorClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h3").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h3").src="images/heart-icon.png";
+                sessionStorage.setItem('LOR', 'YES');
+                sessionStorage.setItem('LOR-NAME', 'Lord of the Rings');
+                sessionStorage.setItem('LOR-AUTHOR', 'J. R. R Tolkien');
+                sessionStorage.setItem('LOR-IMAGE', 'images/bbb.jpg');
+                alert(sessionStorage.getItem('LOR'));
+            }else{
+                //alert("red");
+                document.getElementById("h3").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('LOR', 'NO');
+                alert(sessionStorage.getItem('LOR'));
+                
+            }
+            //alert(filename);
+
+        }
+        function jeClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h4").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h4").src="images/heart-icon.png";
+                sessionStorage.setItem('JE', 'YES');
+                sessionStorage.setItem('JE-NAME', 'Jane Eyre');
+                sessionStorage.setItem('JE-AUTHOR', 'Charlotte Bronte');
+                sessionStorage.setItem('JE-IMAGE', 'images/grd.jpg');
+                alert(sessionStorage.getItem('JE'));
+            }else{
+                //alert("red");
+                document.getElementById("h4").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('JE', 'NO');
+                alert(sessionStorage.getItem('JE'));
+                
+            }
+            //alert(filename);
+
+        }
+
 
 /*function getName() {
      var fullPath = document.getElementById("img1").src;
@@ -169,12 +242,16 @@
                         <!--<a href="TwilT.html">-->
 
                         <div class="trending_list_img">
+                            <a href="TwilT.html">
                             <img src="images/ffe.jpg">
+                        </a>
                         </div>
 
                         <div class="trending_list_desc trnd-new">
+                            <a href="TwilT.html">
                             <h2>Twilight</h2>
                             <p>Stephenie Meyer</p>
+                        </a>
                         </div>
 
                         <div class="trending_place">
@@ -182,7 +259,7 @@
                         </div>
 
                         <div class = "favClass">
-                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                            <img id = "h2" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="twClick()"/>
                         </div>
 
                         <div class="cal-arrrow trndngarr">
@@ -195,12 +272,16 @@
                         <!--<a href="LORT.html">-->
 
                         <div class="trending_list_img">
+                            <a href="LORT.html">
                             <img src="images/bbb.jpg">
+                        </a>
                         </div>
 
                         <div class="trending_list_desc trnd-new">
+                            <a href="LORT.html">
                             <h2>Lord of the Rings</h2>
                             <p>J. R. R Tolkien</p>
+                        </a>
                         </div>
 
                         <div class="trending_place"></div>
@@ -210,7 +291,7 @@
                         </div>
 
                         <div class = "favClass">
-                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                            <img id = "h3" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="lorClick()"/>
                         </div>
 
                         <div class="cal-arrrow trndngarr">
@@ -219,21 +300,25 @@
 
                         <!--</a>-->
                     </li>
-                    <li id="item4"><a href="JET.html">
+                    <li id="item4">
 
                         <div class="trending_list_img">
+                            <a href="JET.html">
                             <img src="images/grd.jpg">
+                        </a>
                         </div>
 
                         <div class="trending_list_desc trnd-new">
+                          <a href="JET.html">
                             <h2>Jane Eyre</h2>
                             <p>Charlotte Bronte</p>
+                        </a>
                         </div>
 
                         <div class="trending_place">&nbsp;</div>
 
                         <div class = "favClass">
-                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                            <img id = "h4" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="jeClick()"/>
                         </div>
 
                         <div class="cal-arrrow trndngarr">
