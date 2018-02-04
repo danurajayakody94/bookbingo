@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>jQM Complex Demo</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script type="text/javascript" src="instascan.min.js"></script>
+      <script>
+       $( "#mypanel" ).trigger( "updatelayout" );
+
+       function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+       }
+
+       function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+       }
+
+      </script>
+
+        <!-- script>
+            $(document).on('pageshow', '#index', function (e, data) {
+
+    setTimeout(function () {
+        // This is the minimum zoom level that we'll allow
+        var minZoomLevel = 12;
+
+        var map = new google.maps.Map(document.getElementById('map_canvas'), {
+            zoom: minZoomLevel,
+            center: new google.maps.LatLng(38.50, -90.50),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+    }, 1);
+});
+        </script>
+        <script type = "text/css">
+        #content {
+    padding: 0;
+    position : absolute !important;
+    top : 40px !important;
+    right : 0;
+    bottom : 40px !important;
+    left : 0 !important;
+}
+        </script -->
+    </head>
+
+    <body>
+
+      <div data-role="page" id="pageone">
+
+        <div class="book_bingo_hdr" data-role="header" data-theme="b">
+            <div class="book_bingo_header_top">
+                <div class="mob-menu">
+                  <a href="#mypanel">
+                  <img src="images/menu.png">
+                  </a>
+                </div>
+
+                <h1><img src="images/icon.png">Map</h1>
+                <div class="mob-setting">
+                  <span onclick="openNav()">
+                    <img src="images/more.png">
+                    </span>
+                </div>
+            </div>
+
+        </div>
+          <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
+
+              <!-- panel content goes here -->
+              <div id="profile_image" class="profbg-img">
+                  <img alt="" src="images/profile_pic.jpg">
+                  <h2>Sachith Perera</h2>
+                  <p>sachith.perera@revport.net</p>
+              </div>
+              <div class="sliderList main-nav-opt-list">
+                  <ul data-role="listview">
+                      <li><a href="leaderboard.html">Leaderboard</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Scan the Code</a></li>
+                      <li><a href="completetasks.html">Complete Tasks</a></li>
+                      <li><a href="contract.html">Contract Us</a></li>
+                      <li><a href="login.html">Sign Out</a></li>
+                  </ul>
+              </div>
+
+              <div class="dark-over-lay">&nbsp;</div>
+
+          </div><!-- /panel -->
+
+          <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#" style="padding-top: 40px !important;">About Us</a>
+              <a href="#">Settings</a>
+              <a href="contract.html">Contact Us</a>
+              <a href="login.html">Sign Out</a>
+          </div>
+
+
+        <div data-role = "main" class = "ui-content trending_body map">
+
+
+            <div class="map-page-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7922.551557405312!2d79.86513042498872!3d6.8575129801772885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3ae25baf80762cb7%3A0x3be1773e40d3d916!2sIIT(building+2)%2C+47th+Lane+A%2C+Colombo!3m2!1d6.8642509!2d79.86328499999999!4m5!1s0x3ae25afdc9d7ea63%3A0xe3aa08fff4ebd4c!2sM.+D.+Gunasena+Book+Shop%2C+Dehiwala-Mount+Lavinia!3m2!1d6.849895!2d79.876463!5e0!3m2!1sen!2slk!4v1516640404184" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+
+            <div class="listCont trending_list">
+
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>Vijitha Yapa</p>
+                        </div>
+
+                        <div class="trending_place">
+                            <p>1</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>20%<br>
+                            OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#" onclick="showQR('preview');">
+                      <!-- QR code javascript is in the home.html since its not working in map.html-->
+                      <video id="preview"></video>
+                      <!-- QR code end -->
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>MD Gunasena</p>
+                        </div>
+
+                        <div class="trending_place">
+                            <p>2</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>25%<br>
+                                OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                    <li class="to-cmplt"><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>MD Gunasena</p>
+                        </div>
+
+                        <div class="trending_place">
+                            <p>3</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>20%<br>
+                                OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                    <li class="to-cmplt"><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>MD Gunasena</p>
+                        </div>
+
+                        <div class="trending_place">
+                           <p>4</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>15%<br>
+                                OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                    <li class="to-cmplt"><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>MD Gunasena</p>
+                        </div>
+
+                        <div class="trending_place">
+                            <p>5</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>20%<br>
+                                OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                    <li class="to-cmplt"><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>MD Gunasena</p>
+                        </div>
+
+                        <div class="trending_place">
+                            <p>6</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>20%<br>
+                                OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                    <li class="to-cmplt"><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <p>MD Gunasena</p>
+                        </div>
+
+                        <div class="trending_place">
+                            <p>7</p>
+                        </div>
+
+                        <div class = "favClass">
+                            <p>20%<br>
+                                OFF
+                            </p>
+                        </div>
+
+                    </a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <div data-role = "footer" class="book_bingo_foter">
+            <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                <ul>
+                    <li>
+                        <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
+                            <img src="images/trending.png">
+                            <p>Trending</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                            <img src="images/home.png">
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item menu_current">
+                        <img src="images/map.png">
+                        <p>Map</p>
+                    </a></li>
+                    <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                        <img src="images/events.png">
+                        <p>Events</p>
+                    </a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+
+    </body>
+
+</html>
