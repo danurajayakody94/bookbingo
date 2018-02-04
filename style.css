@@ -1272,6 +1272,11 @@ div.txt {
     display: none;
 }
 
+.trending_list_desc a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
 
 /*
 ****
