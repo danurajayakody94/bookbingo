@@ -1660,6 +1660,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .retrndng {
         min-height: 940px;
+        max-height: 2000px;
+        float: left;
+        width: 100%;
     }
 
     .profbg-img h2, .profbg-img p {
@@ -1671,6 +1674,28 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .profbg-img p {
         margin-bottom: 35px;
+    }
+
+    .bdy-tab {
+        width: 100%;
+        float: left;
+    }
+
+    .tab-srchbx {
+        width: 96%;
+        float: left;
+        margin: 0;
+        padding: 10px 2%;
+        background: #00aeef;
+    }
+
+    .tab_body.fith-fltrs {
+        top: 0px;
+    }
+
+    .retrndng.with-fltrs {
+        height: 852px !important;
+        min-height: auto;
     }
 }
 
@@ -1693,6 +1718,17 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .retrndng {
         min-height: 659px;
+        max-height: 2000px;
+        float: left;
+        width: 100%;
+    }
+
+    .retrndng.with-fltrs {
+        height: 576px !important;
+        min-height: auto;
+        max-height: 2000px;
+        float: left;
+        width: 100%;
     }
 
     .tab_body {
@@ -1711,6 +1747,22 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .side-nav-custom.ui-panel {
         top: 118px;
+    }
+
+    .tab-srchbx {
+        width: 96%;
+        float: left;
+        margin: 0;
+        padding: 10px 2%;
+        background: #00aeef;
+    }
+
+    .fith-fltrs {
+        top: 20px;
+    }
+
+    .tab_body.fith-fltrs {
+        top: 20px;
     }
 
 }

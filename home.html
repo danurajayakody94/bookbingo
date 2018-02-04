@@ -1,315 +1,386 @@
 <!DOCTYPE html>
 <html>
-
-   <head>
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-      <link rel = "stylesheet" href = "style.css">
-       <script>
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
         $( "#mypanel" ).trigger( "updatelayout" );
         $( "#mypanel1" ).trigger( "updatelayout" );
+    </script>
 
-        $(document).ready(function(){
-          $("#search").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#filter *").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-          });
-        });
+</head>
 
 
-       </script>
+<body>
+<div data-role="page" id="pageone" class="trendng">
 
-   </head>
+    <!--S <script type="text/javascript">
+       //item 1
+    // $(document).bind("pageinit", function(){
+    //   $("#test ui li").click(function(){
+    //     var argValue = $("#item1").val();
+    //     var id = $(this).attr("id"); // Get the ID
+    //     alert($(this).attr("id"));
+    //     $.mobile.changePage("bookDetailVC.html",{data:{arg1:id}});
+    //     //or you could pass parameters in the URL
+    //     //$.mobile.changePage("page2.html?arg1=Ram");
+    //   });
+    // });
+
+    $(document).on("click", "#test li" ,function (event) {
+      var id = $(this).attr("id"); // Get the ID
+   alert($(this).text());
+   alert(id);
+   $.mobile.changePage("bookDetailVC.html",{data:{arg1:id}});
+});
+
+  </script>-->
+
+    <div class="book_bingo_hdr" data-role="header" data-theme="b">
+        <div class="book_bingo_header_top">
+            <div class="mob-menu">
+                <a href="#mypanel">
+                    <img class="mob-sidenav" src="images/menu.png">
+                </a>
+            </div>
+
+            <h1><img src="images/icon.png">Home</h1>
+            <div class="mob-setting">
+                <a href="#mypanel1">
+                    <img src="images/more.png">
+                </a>
+            </div>
+        </div>
+
+        <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom mob-sidenav">
+
+            <!-- panel content goes here -->
+            <div id="profile_image" class="profbg-img">
+                <img alt="" src="images/profile_pic.jpg">
+                <h2>Sachith Perera</h2>
+                <p>sachith.perera@revport.net</p>
+            </div>
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
+                    <li><a href="leaderboard.html">Leader Board</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="myfav.html">My Favourites</a></li>
+                    <li><a href="completetasks.html">Complete Tasks</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="moregames.html">More Games</a></li>
+                </ul>
+            </div>
+
+            <div class="dark-over-lay">&nbsp;</div>
+
+        </div><!-- /panel -->
 
 
+        <div data-role="panel" id="mypanel1" data-position="right" data-display="overlay" class="side-nav-custom">
+            <!-- panel content goes here -->
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Sign Out</a></li>
+                </ul>
+            </div>
+        </div><!-- /panel -->
+
+        <div class="book_bingo_search mob-sidenav">
+            <form class="ui-filterable">
+                <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value=""
+                       data-type="search" data-mini="true"/>
+            </form>
+            <!-- end -->
+
+        </div>
+
+    </div>
 
 
-   <body>
+    <div data-role="main" class="ui-content trending_body rebdytrndng">
+        <div class="side-nav-custom tab-side-nav">
 
-   <div data-role="page" id="pageone" class="homepg">
+            <!-- panel content goes here -->
+            <div id="profile_imagetab" class="profbg-img">
+                <img alt="" src="images/profile_pic.jpg" class="tab-img">
+                <h2>Sachith Perera</h2>
+                <p>sachith.perera@revport.net</p>
+            </div>
+            <div class="sliderList main-nav-opt-list">
+                <ul data-role="listview">
+                    <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
+                    <li><a href="leaderboard.html">Leader Board</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="myfav.html">My Favourites</a></li>
+                    <li><a href="completetasks.html">Complete Tasks</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="moregames.html">More Games</a></li>
+                </ul>
+            </div>
+        </div><!-- /panel -->
 
-         <div data-role = "header" data-theme="b">
+        <div class="tab_body fith-fltrs">
 
-             <div class="book_bingo_header_top">
-                 <div class="mob-menu">
-                   <a href="#mypanel">
-                   <img src="images/menu.png">
-                 </a>
-                 </div>
+            <div class="book_bingo_search tab-side-nav tab-srchbx">
+                <form class="ui-filterable">
+                    <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value=""
+                           data-type="search" data-mini="true"/>
+                </form>
+                <!-- end -->
 
-                 <h1><img src="images/icon.png">Home</h1>
-                 <div class="mob-setting">
-                    <a href="#mypanel1">
-                     <img src="images/more.png">
+            </div>
+
+            <div class="listCont trending_list retrndng with-fltrs">
+
+                <!--Body Goes hr-->
+
+                <ul class="bdy-tab" data-role="listview" data-inset="true" id="test" data-filter="true"
+                    data-input="#filterBasic-input">
+                    <li><a href="bookDetailVC.html">
+
+                        <div class="trending_list_img">
+                            <img src="images/harrypotter.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Harry Potter</h2>
+                            <p>J. K. Rowling</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="TwilH.html">
+
+                        <div class="trending_list_img">
+                            <img src="images/ffe.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Twilight</h2>
+                            <p>Stephenie Meyer</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="LORH.html">
+
+                        <div class="trending_list_img">
+                            <img src="images/bbb.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Lord of the Rings</h2>
+                            <p>J. R. R Tolkien</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="JEH.html">
+
+                        <div class="trending_list_img">
+                            <img src="images/grd.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Jane Eyre</h2>
+                            <p>Charlotte Bronte</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/bb.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>The Hobbit</h2>
+                            <p>J. R. R Tolkien</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/ff.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Robinson Crusoe</h2>
+                            <p>Daniel Defoe</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/gg.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Gulliver's Travels</h2>
+                            <p>Jonathan Swift</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/bs.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>The Outsiders</h2>
+                            <p>S. E Hinton</p>
+                        </div>
+
+                        <div class="favClass">
+                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                        </div>
+
+                        <div class="trending_place">&nbsp;</div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                </ul>
+
+
+                <!--Body ends-->
+            </div>
+
+            <div data-role="footer" class="book_bingo_foter tab-footr">
+                <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+                    <ul>
+                        <li>
+                            <a href="trendings.html" data-icon="trendingIcon"
+                               class="bottom_menu_item">
+                                <img src="images/trending.png">
+                                <p>Trending</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.html" data-icon="homeIcon" class="bottom_menu_item menu_current">
+                                <img src="images/home.png">
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                            <img src="images/map.png">
+                            <p>Map</p>
+                        </a></li>
+                        <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                            <img src="images/events.png">
+                            <p>Events</p>
+                        </a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+
+    </div>
+
+    <div data-role="footer" class="book_bingo_foter">
+        <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+            <ul class="mob-footr">
+                <li>
+                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
+                        <img src="images/trending.png">
+                        <p>Trending</p>
                     </a>
-                 </div>
-             </div>
-
-             <div data-role="panel" data-display="overlay" id="mypanel" class="side-nav-custom">
-
-                 <!-- panel content goes here -->
-                 <div id="profile_image" class="profbg-img">
-                     <img alt="" src="images/profile_pic.jpg">
-                     <h2>Sachith Perera</h2>
-                     <p>sachith.perera@revport.net</p>
-                 </div>
-                 <div class="sliderList main-nav-opt-list">
-                     <ul data-role="listview">
-                         <li><a href="bookCatagryFairy.html">Book Catogaries</a></li>
-                         <li><a href="leaderboard.html">Leader Board</a></li>
-                         <li><a href="news.html">News</a></li>
-                         <li><a href="myfav.html">My Favourites</a></li>
-                         <li><a href="completetasks.html">Complete Tasks</a></li>
-                         <li><a href="profile.html">My Profile</a></li>
-                         <li><a href="moregames.html">More Games</a></li>
-                     </ul>
-                 </div>
-
-                 <div class="dark-over-lay">&nbsp;</div>
-
-             </div><!-- /panel -->
-
-
-             <div data-role="panel" id="mypanel1" data-position="right" data-display="overlay" class="side-nav-custom">
-                 <!-- panel content goes here -->
-                 <div class="sliderList main-nav-opt-list">
-                     <ul data-role="listview">
-                         <li><a href="about.html">About Us</a></li>
-                         <li><a href="contact.html">Contact Us</a></li>
-                         <li><a href="login.html">Sign Out</a></li>
-                       </ul>
-                 </div>
-             </div><!-- /panel -->
-
-             <div class="book_bingo_search">
-               <form class="ui-filterable">
-        <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value="" data-type="search" data-mini="true" />
-    </form>
-    <!-- end -->
-
-                 </div>
-
-         </div>
-
-
-          <div data-role = "main" class = "ui-content trending_body">
-
-              <div class="listCont trending_list" id="filter">
-
-                  <ul data-role="listview" data-inset="true" id = "test" data-filter="true" data-input="#filterBasic-input">
-                      <li><a href="bookDetailVC.html">
-
-                          <div class="trending_list_img">
-                              <img src="images/harrypotter.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>Harry Potter</h2>
-                              <p>J. K. Rowling</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="TwilH.html">
-
-                          <div class="trending_list_img">
-                              <img src="images/ffe.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>Twilight</h2>
-                              <p>Stephenie Meyer</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="LORH.html">
-
-                          <div class="trending_list_img">
-                              <img src="images/bbb.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>Lord of the Rings</h2>
-                              <p>J. R. R Tolkien</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="JEH.html">
-
-                          <div class="trending_list_img">
-                              <img src="images/grd.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>Jane Eyre</h2>
-                              <p>Charlotte Bronte</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="#">
-
-                          <div class="trending_list_img">
-                              <img src="images/bb.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>The Hobbit</h2>
-                              <p>J. R. R Tolkien</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="#">
-
-                          <div class="trending_list_img">
-                              <img src="images/ff.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>Robinson Crusoe</h2>
-                              <p>Daniel Defoe</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="#">
-
-                          <div class="trending_list_img">
-                              <img src="images/gg.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>Gulliver's Travels</h2>
-                              <p>Jonathan Swift</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                      <li><a href="#">
-
-                          <div class="trending_list_img">
-                              <img src="images/bs.jpg">
-                          </div>
-
-                          <div class="trending_list_desc">
-                              <h2>The Outsiders</h2>
-                              <p>S. E Hinton</p>
-                          </div>
-
-                          <div class = "favClass">
-                              <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
-                          </div>
-
-                          <div class="trending_place">&nbsp;</div>
-
-                          <div class="cal-arrrow trndngarr">
-                              <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
-                          </div>
-
-                      </a></li>
-                  </ul>
-              </div>
-
-          </div>
-
-
-
-          <div data-role = "footer" class="book_bingo_foter">
-              <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
-                  <ul>
-                      <li>
-                          <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
-                              <img src="images/trending.png">
-                              <p>Trending</p>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="home.html" data-icon="homeIcon" class="bottom_menu_item menu_current">
-                              <img src="images/home.png">
-                              <p>Home</p>
-                          </a>
-                      </li>
-                      <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
-                          <img src="images/map.png">
-                          <p>Map</p>
-                      </a></li>
-                      <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
-                          <img src="images/events.png">
-                          <p>Events</p>
-                      </a></li>
-                  </ul>
-              </div><!-- /navbar -->
-          </div>
-      </div>
-   </body>
+                </li>
+                <li>
+                    <a href="home.html" data-icon="homeIcon" class="bottom_menu_item menu_current">
+                        <img src="images/home.png">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                    <img src="images/map.png">
+                    <p>Map</p>
+                </a></li>
+                <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                    <img src="images/events.png">
+                    <p>Events</p>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+</div>
+</body>
 </html>
