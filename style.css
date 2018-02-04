@@ -662,7 +662,7 @@ div.txt {
     font-size: 20px;
 }
 
-.map ul li.ui-first-child::after {
+.map .lvl-set li.ui-first-child::after {
     height: 100%;
     content: "Compleated";
     background: rgba(0, 0, 0, 0.8);
@@ -1697,6 +1697,19 @@ and (-webkit-min-device-pixel-ratio: 1) {
         height: 852px !important;
         min-height: auto;
     }
+
+    .map-tab-nav {
+        top: 34px !important;
+    }
+
+    .map-tab-bdy {
+        top: 34px;
+    }
+
+    .map-lst-hight {
+        min-height: auto;
+        height: 470px;
+    }
 }
 
 /* Landscape */
@@ -1763,6 +1776,15 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .tab_body.fith-fltrs {
         top: 20px;
+    }
+
+    .map-tab-nav {
+        top: 54px !important;
+    }
+
+    .map-lst-hight {
+        min-height: auto;
+        height: 241px;
     }
 
 }
