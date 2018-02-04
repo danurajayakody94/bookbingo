@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <script>
+     $( "#mypanel" ).trigger( "updatelayout" );
+     $( "#mypanel1" ).trigger( "updatelayout" );
+    </script>
+
+</head>
+
+
+<body>
+
+<div data-role="page" id="pageone" class="bookdtl">
+
+
+  <div data-role="panel" id="mypanel1" data-position="right" data-display="overlay" class="side-nav-custom">
+      <!-- panel content goes here -->
+      <div class="sliderList main-nav-opt-list">
+          <ul data-role="listview">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="login.html">Sign Out</a></li>
+            </ul>
+      </div>
+  </div><!-- /panel -->
+
+
+    <div data-role="header" data-theme="b">
+
+        <div class="book_bingo_header_top">
+            <div class="mob-menu">
+                <a href="bookCatagryScience.html">
+                    <img src="images/back.png">
+                </a>
+            </div>
+
+            <h1><img src="images/icon.png">Book Profile</h1>
+            <div class="mob-setting">
+              <a href="#mypanel1">
+               <img src="images/more.png">
+              </a>
+            </div>
+        </div>
+
+        <div class="book_bingo_search detl-pg-hdr">
+            <img src="images/c4.jpg">
+            <p class="hdr">Alan's Big, Scary Teeth</p>
+            <p class="dtls" style="margin-bottom: 0px">Jarvis </p>
+        </div>
+
+        <div class="pie-wrapper progress-75 style-2 bk-dtl-mobile">
+            <span class="label">Ratings <span>7.2</span><!--span class="smaller">%</span--></span>
+            <div class="pie">
+                <div class="left-side half-circle"></div>
+                <div class="right-side half-circle"></div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    <div class="detl-pg-bdy prfl-dtl">
+        <p>
+            An alligator who snaps, becomes an alligator who th-naps in this hilarious, heart-warming story of making new friends and discovering who you really are.
+        </p>
+
+        <div class="set-size charts-container">
+
+            <div class="pie-wrapper progress-75 style-2 bk-dtl-web">
+                <span class="label">Ratings <span>7.2</span><!--span class="smaller">%</span--></span>
+                <div class="pie">
+                    <div class="left-side half-circle"></div>
+                    <div class="right-side half-circle"></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div data-role="footer" class="book_bingo_foter">
+        <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
+            <ul>
+                <li>
+                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
+                        <img src="images/trending.png">
+                        <p>Trending</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html" data-icon="homeIcon" class="bottom_menu_item">
+                        <img src="images/home.png">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li><a href="map.html" data-icon="mapIcon" class="bottom_menu_item">
+                    <img src="images/map.png">
+                    <p>Map</p>
+                </a></li>
+                <li><a href="events.html" data-icon="eventsIcon" class="bottom_menu_item">
+                    <img src="images/events.png">
+                    <p>Events</p>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+</div>
+
+
+<script>
+    var item;
+    $("#bookDetailVC").bind("pageshow", function (event) {
+        item = $("#bookDetailVC").attr("data-url");
+        alert(getPamarByName(url, 'arg1'));
+        alert(item);
+    });
+
+    function getPamarByName(url, paramName) {
+        var strGET = url.substr(url.indexOf('?') + 1, url.length - url.indexOf('?'));
+        var arrGET = strGET.split("&");
+        var paramValue = '';
+        for (i = 0; i < arrGET.length; i++) {
+            var aux = arrGET[i].split("=");
+            if (aux[0] == paramName) {
+                paramValue = aux[1];
+            }
+        }
+        return paramValue;
+    }
+
+
+    $('.thumbnail').hover(
+            function () {
+                $(this).find('.caption').slideDown(250); //.fadeIn(250)
+            },
+            function () {
+                $(this).find('.caption').slideUp(250); //.fadeOut(205)
+            }
+    );
+
+
+    //   var dataArr = {
+    // item1 : [{
+    //             title : "Harry Potter",
+    //             description : "Harry finds this chick outta nowhere on his quest to find a wife.",
+    //             img : ""
+    //         }],
+    // item2 : [{
+    //             title : "Twilight",
+    //             description : "",
+    //             img : ""
+    // }],
+    // item3 : [{
+    //             title : "Lord of the rings",
+    //             description : "",
+    //             img : ""
+    // }],
+    // item4 : [{
+    //             title : "Jane Eyre",
+    //             description : "",
+    //             img : ""
+    // }],
+    // item5 : [{
+    //             title : "Peater Pan",
+    //             description : "",
+    //             img : ""
+    // }],
+    // item6 : [{
+    //             title : "Testing 2",
+    //             description : "",
+    //             img : ""
+    // }],
+    // item7 : [{
+    //             title : "Testing 3",
+    //             description : "",
+    //             img : ""
+    // }]
+
+
+    var itemSet = {
+        "items": [
+            {
+                "id": "item1",
+                "title": "Harry harrypotter",
+                description: "fdsfsd",
+                img: "fd",
+                rating: "fdsg"
+            },
+            {
+                "id": "item2",
+                "title": "Harry harrypotter",
+                description: "fdsfsd",
+                img: "fd",
+                rating: "fdsg"
+            },
+            {
+                "id": "item3",
+                "title": "Harry harrypotter",
+                description: "fdsfsd",
+                img: "fd",
+                rating: "fdsg"
+            }
+        ]
+    };
+
+    console.log(itemSet);
+
+    // $("#pageone").load('pageinit', function() {
+    //     // do something here...
+    //   // alert(dataArr);
+    //
+    // });
+    $(itemSet).each(function (index, value) {
+        console.log('itemSet');
+        if (value.items == item) {
+            alert('ELAAAA');
+            console.log('itemSgfdgdfgdet');
+        }
+    });
+
+</script>
+
+
+
+
+</body>
+</html>
