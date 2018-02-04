@@ -1190,6 +1190,75 @@ div.txt {
     width: 20%;
 }
 
+.logn-bg {
+    background: url("images/lginbg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-ovrly {
+    background-color: #00000070;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-lgo img {
+    width: 30%;
+    padding: 10px 35%;
+    margin-top: 50px;
+}
+
+.main-lgo {
+    width: 100%;
+    float: left;
+}
+
+.login-bdy {
+    top: 200px;
+}
+
+.login-bdy h1, .login-bdy p {
+    text-shadow: none;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+}
+
+.login-bdy p {
+    margin-bottom: 80px;
+}
+
+.ggl-lgn {
+    width: 80%;
+    float: left;
+    padding: 10px 10%;
+    margin-top: 20px;
+}
+
+.ggl-lgn .abcRioButton {
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 4px;
+}
+
+.ggl-lgn .abcRioButton .abcRioButtonContentWrapper div {
+    padding: 2px;
+}
+
+.scl-imgs img {
+    width: 44%;
+    padding: 10px 28%;
+}
+
+.ggl-lgn .abcRioButton .abcRioButtonContentWrapper span {
+    ffont-size: 16px;
+    line-height: 36px;
+    text-shadow: none;
+    font-weight: 400;
+}
+
 
 /*
 ****

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:fb="">
 
    <head>
 
@@ -117,9 +117,7 @@ function onSignIn(googleUser) {
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
-      };
-
-
+}
 
 
        </script>
@@ -130,19 +128,48 @@ function onSignIn(googleUser) {
 
 
    <body>
-       <div data-role = "page" id = "pageone">
-           <div data-role = "main" class = "ui-content trending_body">
-              <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-              </fb:login-button>
 
-              <br>
-              <br>
-              <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-<!--<div id="status">
-          <!--  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+   <div id="fb-root"></div>
+   <script>(function (d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s);
+       js.id = id;
+       js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+       fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
 
-              <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>-->
+
+   <div data-role="page" id="pageone" class="logn-bg">
+
+       <div class="bg-ovrly">
+
+           <div class="main-lgo">
+               <img src="images/icon.png">
+           </div>
+           <div data-role="main" class="ui-content trending_body login-bdy">
+
+               <h1>Book Bingo</h1>
+
+               <p>We hope you will love reading as much as we do</p>
+
+               <div class="fb-login-button" data-width="300px" data-height="50px" style="
+    margin: 10px 10%;
+" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true"
+                    data-use-continue-as="true"></div>
+
+               <div class="g-signin2 ggl-lgn" data-onsuccess="onSignIn" data-theme="dark"></div>
+               <!--<div id="status">
+                         <!--  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+                             <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+               </fb:login-button>-->
+
+               <div class="main-lgo scl-imgs">
+                   <img src="images/scl.png">
+               </div>
+
+           </div>
            </div>
        </div>
    </body>
