@@ -9,44 +9,17 @@
     <script>
         $("#mypanel").trigger("updatelayout");
         $("#mypanel1").trigger("updatelayout");
-
-        function hpClick() {
-
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h1").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h1").src = "images/heart-icon.png";
-                sessionStorage.setItem('HP', 'YES');
-                sessionStorage.setItem('HP-NAME', 'Harry Potter');
-                sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
-                alert(sessionStorage.getItem('HP'));
-            } else {
-                //alert("red");
-                document.getElementById("h1").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('HP', 'NO');
-                alert(sessionStorage.getItem('HP'));
-
-            }
-            //alert(filename);
-
-        }
-
-        /*function getName() {
-         var fullPath = document.getElementById("img1").src;
-         var filename = fullPath.replace(/^.*[\\\/]/, '');
-         // or, try this,
-         // var filename = fullPath.split("/").pop();
-
-         document.getElementById("result").value = filename;
-         }*/
+        $(document).ready(function () {
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#filter *").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
     </script>
 
 </head>
-
 
 
 <body>
@@ -60,7 +33,7 @@
                 </a>
             </div>
 
-            <h1><img src="images/icon.png">Trendings</h1>
+            <h1><img src="images/icon.png">Games</h1>
             <div class="mob-setting">
                 <a href="#mypanel1">
                     <img src="images/more.png">
@@ -104,6 +77,14 @@
             </div>
         </div><!-- /panel -->
 
+        <div class="book_bingo_search mob-sidenav">
+            <form class="ui-filterable">
+                <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value=""
+                       data-type="search" data-mini="true"/>
+            </form>
+            <!-- end -->
+        </div>
+
     </div>
 
 
@@ -129,45 +110,154 @@
             </div>
         </div><!-- /panel -->
 
-        <div class="tab_body">
-            <div class="listCont trending_list retrndng">
+        <div class="tab_body fith-fltrs">
 
+            <div class="book_bingo_search tab-side-nav tab-srchbx">
+                <form class="ui-filterable">
+                    <input type="search" placeholder="Search" name="search-mini" id="filterBasic-input" value=""
+                           data-type="search" data-mini="true"/>
+                </form>
+                <!-- end -->
 
-                <ul data-role="listview" data-inset="true" id="test">
-                    <li id="item1">
+            </div>
 
-                        <div class="trending_list_img">
-                            <img src="images/13.jpg">
-                        </div>
+            <div class="listCont trending_list retrndng with-fltrs">
 
-                        <div class="trending_list_desc cmplttsk-desc">
-                            <h2>Jane Eyre</h2>
-                        </div>
-
-                        <div class="status-bdge">
-                            <span class="cmplt">Completed</span>
-                        </div>
-                    </li>
-
-                    <li id="item2">
+                <!--Body Goes hr-->
+                <ul class="bdy-tab mr-gms" data-role="listview" data-inset="true" id="test" data-filter="true"
+                    data-input="#filterBasic-input">
+                    <li><a href="game1.html">
 
                         <div class="trending_list_img">
                             <img src="images/harrypotter.jpg">
                         </div>
 
-                        <div class="trending_list_desc cmplttsk-desc">
-                            <h2>Harry Potter</h2>
+                        <div class="trending_list_desc">
+                            <h2>Caesar</h2>
+                            <p>Puzzle Game</p>
                         </div>
 
-                        <div class="status-bdge">
-                            <a href="quiz.html">
-                                <span class="pndng">Click to Complete ></span>
-                            </a>
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
                         </div>
-                    </li>
+
+                    </a></li>
+                    <li><a href="game1.html">
+
+                        <div class="trending_list_img">
+                            <img src="http://images.android.qualityindex.com/android_screenshots/827781/us-android-1-super-shape-and-word-puzzle-game.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Caesar</h2>
+                            <p>Puzzle Game</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="game2.html">
+
+                        <div class="trending_list_img">
+                            <img src="http://onlinegameshere.com/wp-content/uploads/2017/12/online.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Clash of Clans</h2>
+                            <p>Action Game</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="">
+
+                        <div class="trending_list_img">
+                            <img src="http://cdn7.shockwave.com/i/dynamicFeatures/crazycle_dynamic_feature.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Crzycle</h2>
+                            <p>Car Game</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="">
+
+                        <div class="trending_list_img">
+                            <img src="http://nick-intl.mtvnimages.com/uri/mgid:file:gsp:scenic:/international/nick.co.uk/games/images/henry-danger/hd-danger-trials-promo-4x3.jpg?quality=0.90&height=473&width=630&matte=true&crop=true">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Danger trials</h2>
+                            <p>Action game</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/ff.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Robinson Crusoe</h2>
+                            <p>Daniel Defoe</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/gg.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>Gulliver's Travels</h2>
+                            <p>Jonathan Swift</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
+                    <li><a href="#">
+
+                        <div class="trending_list_img">
+                            <img src="images/bs.jpg">
+                        </div>
+
+                        <div class="trending_list_desc">
+                            <h2>The Outsiders</h2>
+                            <p>S. E Hinton</p>
+                        </div>
+
+                        <div class="cal-arrrow trndngarr">
+                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                        </div>
+
+                    </a></li>
                 </ul>
 
 
+                <!--Body ends-->
             </div>
 
             <div data-role="footer" class="book_bingo_foter tab-footr">
@@ -175,7 +265,7 @@
                     <ul>
                         <li>
                             <a href="trendings.html" data-icon="trendingIcon"
-                               class="bottom_menu_item menu_current">
+                               class="bottom_menu_item">
                                 <img src="images/trending.png">
                                 <p>Trending</p>
                             </a>
@@ -205,7 +295,7 @@
         <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
             <ul class="mob-footr">
                 <li>
-                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item menu_current">
+                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
                         <img src="images/trending.png">
                         <p>Trending</p>
                     </a>
@@ -227,6 +317,8 @@
             </ul>
         </div><!-- /navbar -->
     </div>
+
+
 </div>
 </body>
 </html>
