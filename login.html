@@ -66,6 +66,7 @@
            if (response.status === 'connected') {
              // Logged into your app and Facebook.
              testAPI();
+
            } else {
              // The person is not logged into your app or we are unable to tell.
              document.getElementById('status').innerHTML = 'Please log ' +
@@ -105,6 +106,12 @@
 
            FB.getLoginStatus(function(response) {
              statusChangeCallback(response);
+
+           });
+
+           FB.Event.subscribe('auth.login', function(response) {
+             //alert("Logged in.. Redirecting you now...");
+             window.location = "home.html";
            });
 
          };
@@ -126,6 +133,7 @@
              console.log('Successful login for: ' + response.name);
              document.getElementById('status').innerHTML =
               'Thanks for logging in, ' + response.name + '!';
+
            });
          }
 
@@ -144,6 +152,7 @@ function onSignIn(googleUser) {
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+        window.location.replace("home.html");
 }
 
 
@@ -200,7 +209,7 @@ function onSignIn(googleUser) {
                        <img src="images/scl.png">
                    </div>
                </div>
-               <a href="home.html">d </a>
+              
 
            </div>
            </div>
