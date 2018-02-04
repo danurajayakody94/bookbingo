@@ -9,6 +9,35 @@
        <script>
         $( "#mypanel" ).trigger( "updatelayout" );
         $( "#mypanel1" ).trigger( "updatelayout" );
+
+         function openOnImageClick(){
+
+            
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h1").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h1").src="images/heart-icon.png";
+                //sessionStorage.setItem('tag', 'hello');
+            }else{
+                //alert("red");
+                document.getElementById("h1").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                
+            }
+            //alert(filename);
+
+        }
+
+/*function getName() {
+     var fullPath = document.getElementById("img1").src;
+     var filename = fullPath.replace(/^.*[\\\/]/, '');
+     // or, try this, 
+     // var filename = fullPath.split("/").pop();
+
+    document.getElementById("result").value = filename;
+ }*/
        </script>
 
    </head>
@@ -100,7 +129,6 @@
 
                 <ul data-role="listview" data-inset="true" id = "test">
                     <li id="item1"><a href="HPT.html">
-
                         <div class="trending_list_img">
                             <img src="images/harrypotter.jpg">
                         </div>
@@ -111,15 +139,15 @@
                         </div>
 
                         <div class="trending_place">
-                            <img src="images/1.png">
+                            <img id="button" src="images/1.png">
                         </div>
 
                         <div class = "favClass">
-                            <img src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%"/>
+                            <img id = "h1" src="images/white-heart-icon.png" class="ui-li-icon-right" width="20%" onclick="openOnImageClick()"/>
                         </div>
 
                         <div class="cal-arrrow trndngarr">
-                            <img src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
+                            <img id="foo" src="images/leftblack.png" class="ui-li-icon-right" width="40%"/>
                         </div>
 
                     </a></li>
