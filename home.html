@@ -44,6 +44,103 @@
             });
           });
         });
+        /** Trending Page**/
+        function hpClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h1").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h1").src="images/heart-icon.png";
+                sessionStorage.setItem('HP', 'YES');
+                sessionStorage.setItem('HP-NAME', 'Harry Potter');
+                sessionStorage.setItem('HP-AUTHOR', 'J. K. Rowling');
+                sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
+                alert(sessionStorage.getItem('HP'));
+            }else{
+                //alert("red");
+                document.getElementById("h1").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('HP', 'NO');
+                alert(sessionStorage.getItem('HP'));
+                
+            }
+            //alert(filename);
+
+        }
+        function twClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h2").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h2").src="images/heart-icon.png";
+                sessionStorage.setItem('TW', 'YES');
+                sessionStorage.setItem('TW-NAME', 'Twilight');
+                sessionStorage.setItem('TW-AUTHOR', 'Stephenie Meyer');
+                sessionStorage.setItem('TW-IMAGE', 'images/ffe.jpg');
+                alert(sessionStorage.getItem('TW'));
+            }else{
+                //alert("red");
+                document.getElementById("h2").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('TW', 'NO');
+                alert(sessionStorage.getItem('TW'));
+                
+            }
+            //alert(filename);
+
+        }
+        function lorClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h3").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h3").src="images/heart-icon.png";
+                sessionStorage.setItem('LOR', 'YES');
+                sessionStorage.setItem('LOR-NAME', 'Lord of the Rings');
+                sessionStorage.setItem('LOR-AUTHOR', 'J. R. R Tolkien');
+                sessionStorage.setItem('LOR-IMAGE', 'images/bbb.jpg');
+                alert(sessionStorage.getItem('LOR'));
+            }else{
+                //alert("red");
+                document.getElementById("h3").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('LOR', 'NO');
+                alert(sessionStorage.getItem('LOR'));
+                
+            }
+            //alert(filename);
+
+        }
+        function jeClick(){
+   
+            //document.getElementById("h1").src="images/heart-icon.png";
+            var fullPath = document.getElementById("h4").src;
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            if(filename == "white-heart-icon.png"){
+               // alert("white");
+                document.getElementById("h4").src="images/heart-icon.png";
+                sessionStorage.setItem('JE', 'YES');
+                sessionStorage.setItem('JE-NAME', 'Jane Eyre');
+                sessionStorage.setItem('JE-AUTHOR', 'Charlotte Bronte');
+                sessionStorage.setItem('JE-IMAGE', 'images/grd.jpg');
+                alert(sessionStorage.getItem('JE'));
+            }else{
+                //alert("red");
+                document.getElementById("h4").src="images/white-heart-icon.png";
+                //alert(sessionStorage.getItem('tag'));
+                sessionStorage.setItem('JE', 'NO');
+                alert(sessionStorage.getItem('JE'));
+                
+            }
+            //alert(filename);
+
+        }
     </script>
 
 </head>
