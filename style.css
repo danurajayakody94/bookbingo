@@ -408,6 +408,11 @@ hr {
     width: 41%;
     float: left;
     margin-left: 2%;
+    color: #000 !important;
+}
+
+.trending_list_desc h2, .trending_list_desc p {
+    color: #000 !important;
 }
 
 .ui-btn-icon-right {
@@ -660,6 +665,7 @@ div.txt {
     margin-left: 4%;
     margin-top: 7px;
     font-size: 20px;
+    color: #000;
 }
 
 .map .lvl-set li.ui-first-child::after {
