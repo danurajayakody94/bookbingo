@@ -6,116 +6,21 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script>
-        $("#mypanel").trigger("updatelayout");
-        $("#mypanel1").trigger("updatelayout");
-
-        function hpClick() {
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h1").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h1").src = "images/heart-icon.png";
-                sessionStorage.setItem('HP', 'YES');
-                sessionStorage.setItem('HP-NAME', 'Harry Potter');
-                sessionStorage.setItem('HP-AUTHOR', 'J. K. Rowling');
-                sessionStorage.setItem('HP-IMAGE', 'images/harrypotter.jpg');
-                alert(sessionStorage.getItem('HP'));
-            } else {
-                //alert("red");
-                document.getElementById("h1").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('HP', 'NO');
-                alert(sessionStorage.getItem('HP'));
-
-            }
-            //alert(filename);
-
+    <script type="text/javascript" src="instascan.min.js"></script>
+   <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        console.log(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
         }
-        function twClick() {
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h2").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h2").src = "images/heart-icon.png";
-                sessionStorage.setItem('TW', 'YES');
-                sessionStorage.setItem('TW-NAME', 'Twilight');
-                sessionStorage.setItem('TW-AUTHOR', 'Stephenie Meyer');
-                sessionStorage.setItem('TW-IMAGE', 'images/ffe.jpg');
-                alert(sessionStorage.getItem('TW'));
-            } else {
-                //alert("red");
-                document.getElementById("h2").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('TW', 'NO');
-                alert(sessionStorage.getItem('TW'));
-
-            }
-            //alert(filename);
-
-        }
-        function lorClick() {
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h3").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h3").src = "images/heart-icon.png";
-                sessionStorage.setItem('LOR', 'YES');
-                sessionStorage.setItem('LOR-NAME', 'Lord of the Rings');
-                sessionStorage.setItem('LOR-AUTHOR', 'J. R. R Tolkien');
-                sessionStorage.setItem('LOR-IMAGE', 'images/bbb.jpg');
-                alert(sessionStorage.getItem('LOR'));
-            } else {
-                //alert("red");
-                document.getElementById("h3").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('LOR', 'NO');
-                alert(sessionStorage.getItem('LOR'));
-
-            }
-            //alert(filename);
-
-        }
-        function jeClick() {
-
-            //document.getElementById("h1").src="images/heart-icon.png";
-            var fullPath = document.getElementById("h4").src;
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            if (filename == "white-heart-icon.png") {
-                // alert("white");
-                document.getElementById("h4").src = "images/heart-icon.png";
-                sessionStorage.setItem('JE', 'YES');
-                sessionStorage.setItem('JE-NAME', 'Jane Eyre');
-                sessionStorage.setItem('JE-AUTHOR', 'Charlotte Bronte');
-                sessionStorage.setItem('JE-IMAGE', 'images/grd.jpg');
-                alert(sessionStorage.getItem('JE'));
-            } else {
-                //alert("red");
-                document.getElementById("h4").src = "images/white-heart-icon.png";
-                //alert(sessionStorage.getItem('tag'));
-                sessionStorage.setItem('JE', 'NO');
-                alert(sessionStorage.getItem('JE'));
-
-            }
-            //alert(filename);
-
-        }
-
-
-        /*function getName() {
-         var fullPath = document.getElementById("img1").src;
-         var filename = fullPath.replace(/^.*[\\\/]/, '');
-         // or, try this,
-         // var filename = fullPath.split("/").pop();
-
-         document.getElementById("result").value = filename;
-         }*/
+      }).catch(function (e) {
+        console.error(e);
+      });
     </script>
 
 </head>
@@ -203,10 +108,6 @@
 
         <div class="tab_body">
             <div class="listCont trending_list retrndng">
-                QR code
-
-
-                onclick="showQR('preview');"
 
 
                 <!-- QR code javascript is in the home.html since its not working in map.html-->
@@ -221,7 +122,7 @@
                     <ul>
                         <li>
                             <a href="trendings.html" data-icon="trendingIcon"
-                               class="bottom_menu_item menu_current">
+                               class="bottom_menu_item">
                                 <img src="images/trending.png">
                                 <p>Trending</p>
                             </a>
@@ -251,7 +152,7 @@
         <div data-role="navbar" data-iconpos="bottom" class="footer_inner">
             <ul class="mob-footr">
                 <li>
-                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item menu_current">
+                    <a href="trendings.html" data-icon="trendingIcon" class="bottom_menu_item">
                         <img src="images/trending.png">
                         <p>Trending</p>
                     </a>
