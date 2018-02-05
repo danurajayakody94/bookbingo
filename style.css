@@ -1295,6 +1295,11 @@ div.txt {
     text-align: right;
 }
 
+.hdr-ryt {
+    color: #000;
+    text-align: right;
+}
+
 .cntct-frm {
     width: 96%;
     padding: 40px 2%;
@@ -1415,6 +1420,10 @@ div#tabs {
 
 .ui-page-theme-a a {
     color: transparent !important;
+}
+
+.home-top-val {
+    top: 143px;
 }
 
 /*
